@@ -2,28 +2,33 @@ package io.itlabs.springtraining;
 
 import io.itlabs.springtraining.domain.person.Person;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import javax.annotation.Resource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 class BeanDefinitionTests {
 
-    @Resource
+    @Qualifier("aragorn")
+    @Autowired(required = false)
     public Person aragorn;
 
-    @Resource
+    @Qualifier("legolas")
+    @Autowired(required = false)
     public Person legolas;
 
-    @Resource
+    @Qualifier("gandalf")
+    @Autowired(required = false)
     public Person gandalf;
 
-    @Resource
+    @Qualifier("frodo")
+    @Autowired(required = false)
     public Person frodo;
 
-    @Resource
+    @Qualifier("sam")
+    @Autowired(required = false)
     public Person sam;
 
     @Test
