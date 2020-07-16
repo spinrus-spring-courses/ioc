@@ -3,24 +3,4 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="axe" class="io.itlabs.springtraining.domain.weapon.Weapon">
-        <constructor-arg name="type" value="AXE"/>
-    </bean>
-
-    <bean id="bow" class="io.itlabs.springtraining.domain.weapon.Weapon">
-        <constructor-arg name="type" value="BOW"/>
-    </bean>
-
-    <bean id="dagger" class="io.itlabs.springtraining.domain.weapon.Weapon">
-        <constructor-arg name="type" value="DAGGER"/>
-    </bean>
-
-    <bean id="sword" class="io.itlabs.springtraining.domain.weapon.Weapon">
-        <constructor-arg name="type" value="SWORD"/>
-    </bean>
-
-    <bean id="staff" class="io.itlabs.springtraining.domain.weapon.Weapon">
-        <constructor-arg name="type" value="STAFF"/>
-    </bean>
-
 </beans>
