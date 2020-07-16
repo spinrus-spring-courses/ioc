@@ -1,4 +1,4 @@
-package io.itlabs.springworkshop;
+package io.itlabs.springtraining;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
