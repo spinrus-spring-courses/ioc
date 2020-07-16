@@ -7,4 +7,8 @@
         <constructor-arg name="name" value="Aragorn"/>
     </bean>
 
+    <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" factory-method="withName">
+        <constructor-arg name="name" value="Legolas"/>
+    </bean>
+
 </beans>
