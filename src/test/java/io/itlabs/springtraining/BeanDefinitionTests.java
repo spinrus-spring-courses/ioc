@@ -33,26 +33,31 @@ class BeanDefinitionTests {
 
     @Test
     void testAragornName() {
+        assertThat(aragorn).isNotNull();
         assertThat(aragorn.getName()).isEqualTo("Aragorn");
     }
 
     @Test
     void testLegolasName() {
+        assertThat(legolas).isNotNull();
         assertThat(legolas.getName()).isEqualTo("Legolas");
     }
 
     @Test
     void testGandalfName() {
+        assertThat(gandalf).isNotNull();
         assertThat(gandalf.getName()).isEqualTo("Gandalf");
     }
 
     @Test
     void testFrodoName() {
+        assertThat(frodo).isNotNull();
         assertThat(frodo.getName()).isEqualTo("Frodo");
     }
 
     @Test
     void testSamName() {
+        assertThat(sam).isNotNull();
         assertThat(sam.getName()).isEqualTo("Sam");
     }
 }
