@@ -1,7 +1,7 @@
 package io.itlabs.springtraining;
 
 import io.itlabs.springtraining.application.GreetingService;
-import io.itlabs.springtraining.domain.person.Person;
+import io.itlabs.springtraining.domain.groups.Shire;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
@@ -14,7 +14,7 @@ public class SpringTrainingApplication {
         final var applicationContext = SpringApplication.run(SpringTrainingApplication.class, args);
 
         final var greetingService = applicationContext.getBean("greetingService", GreetingService.class);
-        for (var person: applicationContext.getBeansOfType(Person.class).values()) {
+        for (var person: applicationContext.getBean("shire", Shire.class).persons()) {
             greetingService.greet(person);
         }
     }
