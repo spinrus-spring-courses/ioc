@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Configuration;
 public class DomainBeanDefinitions {
 
     @Bean
-    public Person boromir() {
+    public Human boromir() {
         return new Human("Boromir");
     }
 
     @Bean
-    public Person gimli() {
+    public Dwarf gimli() {
         return new Dwarf
                 .DwarfBuilder()
                 .withName("Gimli")
@@ -21,7 +21,7 @@ public class DomainBeanDefinitions {
     }
 
     @Bean
-    public Person meriadoc() {
+    public Hobbit meriadoc() {
         final var hobbit = new Hobbit();
         hobbit.setName("Meriadoc");
 
@@ -29,7 +29,7 @@ public class DomainBeanDefinitions {
     }
 
     @Bean
-    public Person pippin() {
+    public Hobbit pippin() {
         final var hobbit = new Hobbit();
         hobbit.setName("Pippin");
 
@@ -37,7 +37,7 @@ public class DomainBeanDefinitions {
     }
 
     @Bean
-    public Person saruman(MageFactory mageFactory) {
+    public Mage saruman(MageFactory mageFactory) {
         return mageFactory.withName("Saruman");
     }
 
