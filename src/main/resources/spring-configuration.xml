@@ -3,4 +3,26 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="mageFactory" class="io.itlabs.springtraining.domain.person.MageFactory"/>
+
+    <bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
+        <constructor-arg name="name" value="Aragorn"/>
+    </bean>
+
+    <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" factory-method="withName">
+        <constructor-arg name="name" value="Legolas"/>
+    </bean>
+
+    <bean id="gandalf" factory-method="withName" factory-bean="mageFactory">
+        <constructor-arg name="name" value="Gandalf"/>
+    </bean>
+
+    <bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
+        <property name="name" value="Frodo"/>
+    </bean>
+
+    <bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
+        <property name="name" value="Sam"/>
+    </bean>
+
 </beans>
