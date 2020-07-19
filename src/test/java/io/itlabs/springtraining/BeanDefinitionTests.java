@@ -16,9 +16,17 @@ class BeanDefinitionTests {
     @Autowired(required = false)
     public Person aragorn;
 
+    @Qualifier("boromir")
+    @Autowired(required = false)
+    public Person boromir;
+
     @Qualifier("legolas")
     @Autowired(required = false)
     public Person legolas;
+
+    @Qualifier("gimli")
+    @Autowired(required = false)
+    public Person gimli;
 
     @Qualifier("gandalf")
     @Autowired(required = false)
@@ -32,6 +40,18 @@ class BeanDefinitionTests {
     @Autowired(required = false)
     public Person sam;
 
+    @Qualifier("meriadoc")
+    @Autowired(required = false)
+    public Person meriadoc;
+
+    @Qualifier("pippin")
+    @Autowired(required = false)
+    public Person pippin;
+
+    @Qualifier("saruman")
+    @Autowired(required = false)
+    public Person saruman;
+
     @Autowired(required = false)
     public LoggingGreetingService greetingService;
 
@@ -42,9 +62,21 @@ class BeanDefinitionTests {
     }
 
     @Test
+    void testBoromirName() {
+        assertThat(boromir).isNotNull();
+        assertThat(boromir.getName()).isEqualTo("Boromir");
+    }
+
+    @Test
     void testLegolasName() {
         assertThat(legolas).isNotNull();
         assertThat(legolas.getName()).isEqualTo("Legolas");
+    }
+
+    @Test
+    void testGimliName() {
+        assertThat(gimli).isNotNull();
+        assertThat(gimli.getName()).isEqualTo("Gimli");
     }
 
     @Test
@@ -63,6 +95,24 @@ class BeanDefinitionTests {
     void testSamName() {
         assertThat(sam).isNotNull();
         assertThat(sam.getName()).isEqualTo("Sam");
+    }
+
+    @Test
+    void testMeriadocName() {
+        assertThat(meriadoc).isNotNull();
+        assertThat(meriadoc.getName()).isEqualTo("Meriadoc");
+    }
+
+    @Test
+    void testPippinName() {
+        assertThat(pippin).isNotNull();
+        assertThat(pippin.getName()).isEqualTo("Pippin");
+    }
+
+    @Test
+    void testSarumanName() {
+        assertThat(saruman).isNotNull();
+        assertThat(saruman.getName()).isEqualTo("Saruman");
     }
 
     @Test
