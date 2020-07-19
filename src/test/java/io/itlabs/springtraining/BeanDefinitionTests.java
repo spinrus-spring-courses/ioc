@@ -1,5 +1,6 @@
 package io.itlabs.springtraining;
 
+import io.itlabs.springtraining.application.impl.LoggingGreetingService;
 import io.itlabs.springtraining.domain.person.Person;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,9 @@ class BeanDefinitionTests {
     @Autowired(required = false)
     public Person sam;
 
+    @Autowired(required = false)
+    public LoggingGreetingService greetingService;
+
     @Test
     void testAragornName() {
         assertThat(aragorn).isNotNull();
@@ -59,5 +63,11 @@ class BeanDefinitionTests {
     void testSamName() {
         assertThat(sam).isNotNull();
         assertThat(sam.getName()).isEqualTo("Sam");
+    }
+
+    @Test
+    void testGreeting() {
+        assertThat(greetingService).isNotNull();
+        assertThat(greetingService.getGreeting()).isNotEmpty();
     }
 }
