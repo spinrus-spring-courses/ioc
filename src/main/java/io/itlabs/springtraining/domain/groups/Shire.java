@@ -1,7 +1,7 @@
 package io.itlabs.springtraining.domain.groups;
 
 import io.itlabs.springtraining.domain.PersonGroup;
-import io.itlabs.springtraining.domain.person.Person;
+import io.itlabs.springtraining.domain.person.Hobbit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -9,22 +9,22 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class Shire implements PersonGroup {
+public class Shire implements PersonGroup<Hobbit> {
 
     @Autowired
-    private Person frodo;
+    private Hobbit frodo;
 
     @Autowired
-    private Person sam;
+    private Hobbit sam;
 
     @Autowired
-    private Person meriadoc;
+    private Hobbit meriadoc;
 
     @Autowired
-    private Person pippin;
+    private Hobbit pippin;
 
     @Override
-    public List<Person> persons() {
+    public List<Hobbit> persons() {
         return Arrays.asList(frodo, sam, meriadoc, pippin);
     }
 }
