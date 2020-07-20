@@ -2,7 +2,7 @@ package io.itlabs.springtraining.domain.weapon;
 
 public class Weapon {
 
-    enum Type {
+    public enum Type {
         AXE,
         BOW,
         DAGGER,
