@@ -19,10 +19,20 @@
 
     <bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
         <property name="name" value="Frodo"/>
+        <property name="weapons">
+            <list>
+                <ref bean="dagger"/>
+            </list>
+        </property>
     </bean>
 
     <bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
         <property name="name" value="Sam"/>
+        <property name="weapons">
+            <list>
+                <ref bean="dagger"/>
+            </list>
+        </property>
     </bean>
 
 </beans>

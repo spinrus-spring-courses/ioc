@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("greetingService")
 public class LoggingGreetingService implements GreetingService {
 
@@ -18,6 +20,12 @@ public class LoggingGreetingService implements GreetingService {
     @Override
     public void greet(Person person) {
         LOG.info("{}, {}", greeting, person.getName());
+        LOG.info("{}, weapons {}", person.getName(), person.getWeapons());
+    }
+
+    @Override
+    public void greet(List<Person> persons) {
+        persons.forEach(this::greet);
     }
 
     public String getGreeting() {

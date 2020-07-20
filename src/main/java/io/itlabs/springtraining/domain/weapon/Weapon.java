@@ -29,4 +29,9 @@ public class Weapon {
     public void setBroken(boolean broken) {
         this.broken = broken;
     }
+
+    @Override
+    public String toString() {
+        return "Weapon{" + "type=" + type + ", broken=" + broken + '}';
+    }
 }
