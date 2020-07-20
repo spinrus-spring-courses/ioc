@@ -1,7 +1,7 @@
 package io.itlabs.springtraining;
 
-import io.itlabs.springtraining.domain.PersonGroup;
-import io.itlabs.springtraining.domain.person.Person;
+import io.itlabs.springtraining.domain.groups.Shire;
+import io.itlabs.springtraining.domain.person.Hobbit;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,22 +14,22 @@ class DependencyInjectionTests {
 
     @Qualifier("frodo")
     @Autowired(required = false)
-    public Person frodo;
+    public Hobbit frodo;
 
     @Qualifier("sam")
     @Autowired(required = false)
-    public Person sam;
+    public Hobbit sam;
 
     @Qualifier("meriadoc")
     @Autowired(required = false)
-    public Person meriadoc;
+    public Hobbit meriadoc;
 
     @Qualifier("pippin")
     @Autowired(required = false)
-    public Person pippin;
+    public Hobbit pippin;
 
     @Autowired(required = false)
-    private PersonGroup shire;
+    private Shire shire;
 
     @Test
     void testShireHobbits() {
