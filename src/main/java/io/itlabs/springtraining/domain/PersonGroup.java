@@ -4,7 +4,7 @@ import io.itlabs.springtraining.domain.person.Person;
 
 import java.util.List;
 
-public interface PersonGroup {
+public interface PersonGroup<T extends Person> {
 
-    List<Person> persons();
+    List<T> persons();
 }
