@@ -2,14 +2,12 @@ package io.itlabs.springtraining.domain.groups;
 
 import io.itlabs.springtraining.domain.PersonGroup;
 import io.itlabs.springtraining.domain.person.Hobbit;
-import io.itlabs.springtraining.domain.person.Person;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
-public class Shire implements PersonGroup {
+public class Shire implements PersonGroup<Hobbit> {
 
     private final List<Hobbit> hobbits;
 
@@ -18,10 +16,7 @@ public class Shire implements PersonGroup {
     }
 
     @Override
-    public List<Person> persons() {
-        return hobbits
-                .stream()
-                .map(Person.class::cast)
-                .collect(Collectors.toList());
+    public List<Hobbit> persons() {
+        return hobbits;
     }
 }
