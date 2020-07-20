@@ -24,6 +24,5 @@ class QualifierTests {
     void fellowshipOfTheRingTest() {
         assertThat(fellowshipOfTheRing.persons()).hasSize(9);
         assertThat(fellowshipOfTheRing.persons()).doesNotContain(saruman);
-
     }
 }
