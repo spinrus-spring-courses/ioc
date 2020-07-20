@@ -2,6 +2,7 @@ package io.itlabs.springtraining.configuration;
 
 import io.itlabs.springtraining.domain.person.*;
 import io.itlabs.springtraining.domain.weapon.Weapon;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -21,13 +22,13 @@ public class DomainBeanDefinitions {
     }
 
     @Bean
-    @Walker
+    @Qualifier("kind")
     public Human boromir() {
         return new Human("Boromir");
     }
 
     @Bean
-    @Walker
+    @Qualifier("kind")
     public Dwarf gimli() {
         return new Dwarf
                 .DwarfBuilder()
@@ -36,7 +37,7 @@ public class DomainBeanDefinitions {
     }
 
     @Bean
-    @Walker
+    @Qualifier("kind")
     public Hobbit meriadoc() {
         final List<Weapon> weapons = new ArrayList<>();
         weapons.add(dagger());
@@ -49,7 +50,7 @@ public class DomainBeanDefinitions {
     }
 
     @Bean
-    @Walker
+    @Qualifier("kind")
     public Hobbit pippin() {
         final List<Weapon> weapons = new ArrayList<>();
         weapons.add(dagger());

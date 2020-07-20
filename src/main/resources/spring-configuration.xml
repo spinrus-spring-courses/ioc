@@ -5,23 +5,24 @@
 
     <bean id="mageFactory" class="io.itlabs.springtraining.domain.person.MageFactory"/>
 
+
     <bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
-        <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+        <qualifier value="kind"/>
         <constructor-arg name="name" value="Aragorn"/>
     </bean>
 
     <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" factory-method="withName">
-        <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+        <qualifier value="kind"/>
         <constructor-arg name="name" value="Legolas"/>
     </bean>
 
     <bean id="gandalf" factory-method="withName" factory-bean="mageFactory">
-        <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+        <qualifier value="kind"/>
         <constructor-arg name="name" value="Gandalf"/>
     </bean>
 
     <bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
-        <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+        <qualifier value="kind"/>
         <property name="name" value="Frodo"/>
         <property name="weapons">
             <list>
@@ -31,7 +32,7 @@
     </bean>
 
     <bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
-        <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+        <qualifier value="kind"/>
         <property name="name" value="Sam"/>
         <property name="weapons">
             <list>
