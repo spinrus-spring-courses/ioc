@@ -401,7 +401,7 @@ public class Shire implements PersonGroup<Hobbit> {
 }
 ```
 @[1]
-@[3,6,9,12]
+@[4,7,10,13]
 
 +++
 
@@ -452,6 +452,10 @@ public class Shire implements PersonGroup<Hobbit> {
 
 +++
 
+@snap[north-east]
+#### Shire.java
+@snapend
+
 ```java
 @Component
 public class Shire implements PersonGroup<Hobbit> {
@@ -478,7 +482,7 @@ public class Shire implements PersonGroup<Hobbit> {
 }
 ```
 @[1]
-@[3,5,7,9,11]
+@[4,6,8,10,12]
 
 +++
 
