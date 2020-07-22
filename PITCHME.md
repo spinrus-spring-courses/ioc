@@ -10,7 +10,7 @@
 
 ---
 
-@snap[north span-100]
+@snap[north-east]
 #### Person.java
 @snapend
 
@@ -30,46 +30,47 @@ public abstract class Person implements Named {
 
 }
 ```
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Hobbit.java&lang=java&position=left
+
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Hobbit.java&lang=java
 @[3-5]
 
-@snap[north span-100]
+@snap[north-east]
 #### Hobbit.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Human.java&lang=java&position=left
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Human.java&lang=java
 @[5-7]
 
-@snap[north span-100]
+@snap[north-east]
 #### Human.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Elf.java&lang=java&position=left
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Elf.java&lang=java
 @[5-7]
 @[9-11]
 
-@snap[north span-100]
+@snap[north-east]
 #### Elf.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Dwarf.java&lang=java&position=left
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Dwarf.java&lang=java
 @[5-20]
 
-@snap[north span-100]
+@snap[north-east]
 #### Dwarf.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Mage.java&lang=java&position=left
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Mage.java&lang=java
 @[5-7]
 
-@snap[north span-100]
+@snap[north-east]
 #### Mage.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/MageFactory.java&lang=java&position=left
++++?code=src/main/java/io/itlabs/springtraining/domain/person/MageFactory.java&lang=java
 @[3-8]
 
-@snap[north span-100]
+@snap[north-east]
 #### MageFactory.java
 @snapend
 
@@ -81,7 +82,7 @@ public abstract class Person implements Named {
 
 ---
 
-@snap[north span-100]
+@snap[north-east]
 #### SpringTrainingApplication.java
 @snapend
 
@@ -158,7 +159,7 @@ public class SpringTrainingApplication {
 
 ---
 
-@snap[north span-100]
+@snap[north-east]
 #### SpringTrainingApplication.java
 @snapend
 
@@ -248,7 +249,7 @@ REFERENCES "forum" ("id");
 @snapend
 
 
----?image=assets/img/code.jpg&opacity=60&position=left&size=45% 100%
+---?image=assets/img/code.jpg&opacity=60&size=45% 100%
 
 @snap[east span-50 text-center]
 ## Now It's **Your** Turn
