@@ -246,6 +246,7 @@ public class LoggingGreetingService implements GreetingService {
 }
 ```
 @[1]
+@[3]
 
 +++
 
@@ -269,6 +270,7 @@ public class SpringTrainingApplication {
     }
 }
 ```
+@[8-11]
 
 ---
 
