@@ -1,8 +1,10 @@
+@snap[center]
 # Spring Framework: IoC, Dependency Injection
+@snapend
 
 ---
-@snap[north span-100]
-#### Предметная область для тестовых заданий
+@snap[center]
+## Предметная область для тестовых заданий
 @snapend
 
 ---
@@ -64,7 +66,7 @@ public abstract class Person implements Named {
 @snapend
 
 +++?code=src/main/java/io/itlabs/springtraining/domain/person/MageFactory.java&lang=java
-@[5-7]
+@[3-8]
 
 @snap[north span-100]
 #### MageFactory.java
