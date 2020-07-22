@@ -124,6 +124,7 @@ public class SpringTrainingApplication {
 #### spring-configuration.xml
 @snapend
 
+@snap[text-05]
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -160,6 +161,7 @@ public class SpringTrainingApplication {
 @[11-14]
 @[16, 18-20]
 @[22-28]
+@snapend
 
 ---
 
