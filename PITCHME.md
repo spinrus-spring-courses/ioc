@@ -74,19 +74,40 @@ public abstract class Person implements Named {
 @snapend
 
 ---
+
+@snap[center]
+### А где же Spring?
+@snapend
+
+---
+
+@snap[north span-100]
+### 
+#### SpringTrainingApplication.java
+@snapend
+
+```java
+@SpringBootApplication
+@ImportResource("classpath:spring-configuration.xml")
+public class SpringTrainingApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringTrainingApplication.class, args);
+    }
+}
+```
+@[1]
+@[2]
+@[5-7]
+
+---
 @snap[north-west span-55]
 ## Задание №1. Объявление бинов, XML.
 @snapend
 
 @snap[west span-55]
 @ul[list-spaced-bullets text-09]
-- Объявить бины:
-@ul[list-spaced-bullets text-09] 
-- Frodo
-- Sam
-- Aragorn
-- Legolas
-- Gandalf
+- Объявить бины: Frodo, Sam, Aragorn, Legolas, Gandalf - через XML конфигурацию.
 @ulend
 - Вывести в консоль атрубут **name** всех объвленных бинов;
 @ulend
