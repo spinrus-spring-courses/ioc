@@ -134,7 +134,7 @@ public class SpringTrainingApplication {
 
 ```xml
 <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" 
-        factory-method="withName">
+      factory-method="withName">
     <constructor-arg name="name" value="Legolas"/>
 </bean>
 ```
@@ -146,9 +146,11 @@ public class SpringTrainingApplication {
 @snapend
 
 ```xml
-<bean id="mageFactory" class="io.itlabs.springtraining.domain.person.MageFactory"/>
+<bean id="mageFactory" 
+      class="io.itlabs.springtraining.domain.person.MageFactory"/>
 
-<bean id="gandalf" factory-method="withName" factory-bean="mageFactory">
+<bean id="gandalf" factory-method="withName" 
+      factory-bean="mageFactory">
     <constructor-arg name="name" value="Gandalf"/>
 </bean>
 ```
@@ -346,7 +348,7 @@ public class DomainBeanDefinitions {
 @[1]
 @[4-7]
 @[9-15]
-@[19-23]
+@[17-23]
 @[25-31]
 @[33-36]
 
