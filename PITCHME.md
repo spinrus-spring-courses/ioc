@@ -30,21 +30,21 @@ public abstract class Person implements Named {
 
 }
 ```
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Hobbit.java&lang=java
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Hobbit.java&lang=java&position=left
 @[3-5]
 
 @snap[north span-100]
 #### Hobbit.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Human.java&lang=java
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Human.java&lang=java&position=left
 @[5-7]
 
 @snap[north span-100]
 #### Human.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Elf.java&lang=java
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Elf.java&lang=java&position=left
 @[5-7]
 @[9-11]
 
@@ -52,21 +52,21 @@ public abstract class Person implements Named {
 #### Elf.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Dwarf.java&lang=java
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Dwarf.java&lang=java&position=left
 @[5-20]
 
 @snap[north span-100]
 #### Dwarf.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Mage.java&lang=java
++++?code=src/main/java/io/itlabs/springtraining/domain/person/Mage.java&lang=java&position=left
 @[5-7]
 
 @snap[north span-100]
 #### Mage.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/MageFactory.java&lang=java
++++?code=src/main/java/io/itlabs/springtraining/domain/person/MageFactory.java&lang=java&position=left
 @[3-8]
 
 @snap[north span-100]
@@ -155,8 +155,31 @@ public class SpringTrainingApplication {
 @[16, 18-20]
 @[22-28]
 @snapend
+
 ---
 
+@snap[north span-100]
+#### SpringTrainingApplication.java
+@snapend
+
+```java
+@SpringBootApplication
+@ImportResource("classpath:spring-configuration.xml")
+public class SpringTrainingApplication {
+
+    private static final Logger LOG = LoggerFactory.getLogger(SpringTrainingApplication.class);
+
+    public static void main(String[] args) {
+        final var applicationContext = SpringApplication.run(SpringTrainingApplication.class, args);
+        Stream.of(applicationContext.getBeanNamesForType(Person.class)).forEach(LOG::info);
+    }
+
+}
+```
+@[8]
+@[9]
+
+---
 ### Add Some Slide Candy
 
 ![IMAGE](assets/img/presentation.png)
