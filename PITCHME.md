@@ -116,13 +116,17 @@ public class SpringTrainingApplication {
 @snapend
 
 ---
+
+@snap[north-west span-55]
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mageFactory" class="io.itlabs.springtraining.domain.person.MageFactory"/>
+    <bean id="mageFactory" 
+          class="io.itlabs.springtraining.domain.person.MageFactory"/>
 
     <bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
         <constructor-arg name="name" value="Aragorn"/>
@@ -146,13 +150,12 @@ public class SpringTrainingApplication {
 
 </beans>
 ```
-
 @[8-10]
 @[12-14]
 @[16-18, 6]
 @[20-22]
 @[24-26]
-
+@snapend
 ---
 
 ### Add Some Slide Candy
