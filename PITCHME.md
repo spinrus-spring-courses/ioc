@@ -237,7 +237,7 @@ public class LoggingGreetingService implements GreetingService {
 #### LoggingGreetingService.java
 @snapend
 
-@snap[west]
+@snap[west snap-80]
 ```java
 package io.itlabs.springtraining.application.impl;
 
