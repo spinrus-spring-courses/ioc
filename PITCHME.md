@@ -1,6 +1,6 @@
 # Spring Framework: IoC, Dependency Injection
 
----?code=src/main/resources/spring-configuration&lang=xml
+---?code=src/main/resources/spring-configuration.xml&lang=xml
 
 @snap[north span-100]
 #### Source Code Delimiter
