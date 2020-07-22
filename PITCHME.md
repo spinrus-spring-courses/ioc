@@ -107,12 +107,12 @@ public class SpringTrainingApplication {
 
 ---
 
-@snap[north-west span-55]
+@snap[north-west]
 #### Задание №1. Объявление бинов, XML.
 @snapend
 
-@snap[west span-55]
-@ul[list-spaced-bullets text-09]
+@snap[west]
+@ul[list-spaced-bullets]
 - Объявить бины: **frodo, sam, aragorn, legolas, gandalf** - через XML конфигурацию.
 - Вывести в консоль атрубут **name** всех объявленных бинов.
 @ulend
@@ -166,6 +166,8 @@ public class SpringTrainingApplication {
 @snapend
 
 ```java
+package io.itlabs.springtraining;
+
 @SpringBootApplication
 @ImportResource("classpath:spring-configuration.xml")
 public class SpringTrainingApplication {
@@ -179,8 +181,8 @@ public class SpringTrainingApplication {
 
 }
 ```
-@[8]
-@[9]
+@[10]
+@[11]
 
 ---
 ### Add Some Slide Candy
