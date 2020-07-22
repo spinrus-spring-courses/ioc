@@ -1,10 +1,11 @@
 @snap[center]
-# Spring Framework: IoC, Dependency Injection
+### Lord of The Spring
+#### Spring Framework: IoC, Dependency Injection
 @snapend
 
 ---
 @snap[center]
-## Предметная область для тестовых заданий
+### Предметная область
 @snapend
 
 ---
@@ -70,6 +71,25 @@ public abstract class Person implements Named {
 
 @snap[north span-100]
 #### MageFactory.java
+@snapend
+
+---
+@snap[north-west span-55]
+## Задание №1. Объявление бинов, XML.
+@snapend
+
+@snap[west span-55]
+@ul[list-spaced-bullets text-09]
+- Объявить бины:
+@ul[list-spaced-bullets text-09] 
+- Frodo
+- Sam
+- Aragorn
+- Legolas
+- Gandalf
+@ulend
+- Вывести в консоль атрубут **name** всех объвленных бинов;
+@ulend
 @snapend
 
 ---
