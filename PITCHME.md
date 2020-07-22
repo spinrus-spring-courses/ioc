@@ -240,12 +240,26 @@ public class LoggingGreetingService implements GreetingService {
 ```java
 @Service("greetingService")
 public class LoggingGreetingService implements GreetingService {
+    // ...
+}
 ```
+@span[south]
+@[1]
+@spanend
+
++++
+
+@snap[north-east]
+#### LoggingGreetingService.java
+@snapend
 
 ```java
 @Value("Hello")
 private String greeting;
 ```
+@span[south]
+@[1]
+@spanend
 
 ---
 
