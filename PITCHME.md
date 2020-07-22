@@ -452,6 +452,36 @@ public class Shire implements PersonGroup<Hobbit> {
 
 +++
 
+```java
+@Component
+public class Shire implements PersonGroup<Hobbit> {
+
+    private final Hobbit frodo;
+
+    private final Hobbit sam;
+
+    private final Hobbit meriadoc;
+
+    private final Hobbit pippin;
+
+    public Shire(Hobbit frodo, Hobbit sam, Hobbit meriadoc, Hobbit pippin) {
+        this.frodo = frodo;
+        this.sam = sam;
+        this.meriadoc = meriadoc;
+        this.pippin = pippin;
+    }
+
+    @Override
+    public List<Hobbit> persons() {
+        return Arrays.asList(frodo, sam, meriadoc, pippin);
+    }
+}
+```
+@[1]
+@[3,5,7,9,11]
+
++++
+
 @snap[north-east]
 #### Shire.java
 @snapend
