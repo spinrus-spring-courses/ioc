@@ -448,7 +448,7 @@ public class Shire implements PersonGroup<Hobbit> {
 }
 ```
 @[1]
-@[17,22,27,32]
+@[17-18,22-23,27-28,32-33]
 
 +++
 
@@ -468,7 +468,9 @@ public class Shire implements PersonGroup<Hobbit> {
 
     private final Hobbit pippin;
 
-    public Shire(Hobbit frodo, Hobbit sam, Hobbit meriadoc, Hobbit pippin) {
+    public Shire(Hobbit frodo, Hobbit sam, Hobbit meriadoc, 
+        Hobbit pippin) {
+
         this.frodo = frodo;
         this.sam = sam;
         this.meriadoc = meriadoc;
@@ -482,7 +484,7 @@ public class Shire implements PersonGroup<Hobbit> {
 }
 ```
 @[1]
-@[4,6,8,10,12]
+@[4,6,8,10,12-13]
 
 +++
 
