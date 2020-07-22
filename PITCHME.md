@@ -237,6 +237,7 @@ public class LoggingGreetingService implements GreetingService {
 #### LoggingGreetingService.java
 @snapend
 
+@snap[west]
 ```java
 package io.itlabs.springtraining.application.impl;
 
@@ -265,6 +266,7 @@ public class LoggingGreetingService implements GreetingService {
 ```
 @[3]
 @[8]
+@snapend
 
 ---
 
