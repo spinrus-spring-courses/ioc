@@ -257,6 +257,29 @@ private String greeting;
 ```
 @[1]
 
++++
+
+@snap[north-east]
+#### SpringTrainingApplication.java
+@snapend
+
+```java
+@SpringBootApplication
+@ImportResource("classpath:spring-configuration.xml")
+public class SpringTrainingApplication {
+    
+    public static void main(String[] args) {
+        
+        final var applicationContext = SpringApplication.run(SpringTrainingApplication.class, args);
+    
+        final var greetingService = applicationContext.getBean("greetingService", GreetingService.class);
+        for (var person: applicationContext.getBeansOfType(Person.class).values()) {
+            greetingService.greet(person);
+        }
+    }
+}
+```
+
 ---
 
 ### Add Some Slide Candy
