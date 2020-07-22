@@ -2,10 +2,10 @@
 
 ---
 @snap[north span-100]
-#### Person.java
+#### Предметная область для тестовых заданий
 @snapend
 
-+++
+---
 
 @snap[north span-100]
 #### Person.java
@@ -27,37 +27,37 @@ public abstract class Person implements Named {
 
 }
 ```
-+++?code=src/main/java/io/itlabs/springtraining/domain/Hobbit.java&lang=java
+---?code=src/main/java/io/itlabs/springtraining/domain/Hobbit.java&lang=java
 
 @snap[north span-100]
 #### Hobbit.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/Human.java&lang=java
+---?code=src/main/java/io/itlabs/springtraining/domain/Human.java&lang=java
 
 @snap[north span-100]
 #### Human.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/Elf.java&lang=java
+---?code=src/main/java/io/itlabs/springtraining/domain/Elf.java&lang=java
 
 @snap[north span-100]
 #### Elf.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/Dwarf.java&lang=java
+---?code=src/main/java/io/itlabs/springtraining/domain/Dwarf.java&lang=java
 
 @snap[north span-100]
 #### Dwarf.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/Mage.java&lang=java
+---?code=src/main/java/io/itlabs/springtraining/domain/Mage.java&lang=java
 
 @snap[north span-100]
 #### Mage.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/MageFactory.java&lang=java
+---?code=src/main/java/io/itlabs/springtraining/domain/MageFactory.java&lang=java
 
 @snap[north span-100]
 #### MageFactory.java
