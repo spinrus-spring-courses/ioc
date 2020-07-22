@@ -82,7 +82,6 @@ public abstract class Person implements Named {
 ---
 
 @snap[north span-100]
-### 
 #### SpringTrainingApplication.java
 @snapend
 
@@ -101,14 +100,14 @@ public class SpringTrainingApplication {
 @[5-7]
 
 ---
+
 @snap[north-west span-55]
-## Задание №1. Объявление бинов, XML.
+#### Задание №1. Объявление бинов, XML.
 @snapend
 
 @snap[west span-55]
 @ul[list-spaced-bullets text-09]
 - Объявить бины: Frodo, Sam, Aragorn, Legolas, Gandalf - через XML конфигурацию.
-@ulend
 - Вывести в консоль атрубут **name** всех объвленных бинов;
 @ulend
 @snapend
