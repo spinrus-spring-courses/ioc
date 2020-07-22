@@ -97,9 +97,9 @@ public class SpringTrainingApplication {
     }
 }
 ```
-@[3]
-@[4]
-@[7-9]
+@[1]
+@[2]
+@[5-7]
 
 ---
 
@@ -133,7 +133,8 @@ public class SpringTrainingApplication {
 @snapend
 
 ```xml
-<bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" factory-method="withName">
+<bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" 
+        factory-method="withName">
     <constructor-arg name="name" value="Legolas"/>
 </bean>
 ```
