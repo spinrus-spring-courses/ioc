@@ -509,6 +509,35 @@ public class Shire implements PersonGroup<Hobbit> {
 }
 ```
 
++++
+
+
+@snap[north-east]
+#### SpringTrainingApplication.java
+@snapend
+
+```java
+@SpringBootApplication
+@ImportResource("classpath:spring-configuration.xml")
+public class SpringTrainingApplication {
+    
+    public static void main(String[] args) {
+        
+        ApplicationContext context = SpringApplication
+            .run(SpringTrainingApplication.class, args);
+    
+        GreetingService greetingService = applicationContext
+            .getBean("greetingService", GreetingService.class);
+        
+        Shire shire = context.getBean("shire", Shire.class);
+        for (var person: shire.values()) {
+            greetingService.greet(person);
+        }
+    }
+}
+```
+@[13-16]
+
 ---
 
 ### Add Some Slide Candy
