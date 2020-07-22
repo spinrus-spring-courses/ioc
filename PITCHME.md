@@ -15,6 +15,8 @@
 @snapend
 
 ```java
+package io.itlabs.springtraining.domain.person;
+
 public abstract class Person implements Named {
 
     protected String name;
@@ -99,9 +101,9 @@ public class SpringTrainingApplication {
 }
 ```
 
-@[1]
-@[2]
-@[5-7]
+@[3]
+@[4]
+@[7-9]
 
 ---
 
