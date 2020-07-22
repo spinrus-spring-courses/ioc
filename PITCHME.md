@@ -247,6 +247,10 @@ public class LoggingGreetingService implements GreetingService {
 
 +++
 
+@snap[north-east]
+#### LoggingGreetingService.java
+@snapend
+
 ```java
 @Value("Hello")
 private String greeting;
