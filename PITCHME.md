@@ -305,6 +305,10 @@ public class SpringTrainingApplication {
 
 +++
 
+@snap[north-east]
+#### DomainBeanDefinitions.java
+@snapend
+
 ```java
 @Configuration
 public class DomainBeanDefinitions {
@@ -351,6 +355,45 @@ public class DomainBeanDefinitions {
 @[17-23]
 @[25-31]
 @[33-36]
+
+---
+
+@snap[north-west]
+#### Задание №4. Инъекция зависимости.
+@snapend
+
+@snap[west]
+Привязать бины хоббитов как атрибуты бина **shire** разными способами:
+@ul[list-spaced-bullets]
+- Инъекция атрибута (field injection).
+- Инъекция через сеттер (setter-based injection).
+- Инъекция через конструктор (constructor-based injection).
+- Вывести имена всех жителей Шира(*Shire*) c помощью метода **persons** бина **shire**.
+@ulend
+@snapend
+
++++
+
+@snap[north-east]
+#### Shire.java
+@snapend
+
+```java
+@Component
+public class Shire implements PersonGroup<Hobbit> {
+
+    private final List<Hobbit> hobbits;
+
+    public Shire(List<Hobbit> hobbits) {
+        this.hobbits = hobbits;
+    }
+
+    @Override
+    public List<Hobbit> persons() {
+        return hobbits;
+    }
+}
+```
 
 ---
 
