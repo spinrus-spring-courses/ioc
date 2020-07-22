@@ -184,8 +184,8 @@ public class SpringTrainingApplication {
         LoggerFactory.getLogger(SpringTrainingApplication.class);
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = 
-            SpringApplication.run(SpringTrainingApplication.class, args);
+        ApplicationContext applicationContext = SpringApplication
+            .run(SpringTrainingApplication.class, args);
         
         Stream
             .of(applicationContext.getBeanNamesForType(Person.class))
@@ -271,13 +271,13 @@ public class SpringTrainingApplication {
     
     public static void main(String[] args) {
         
-        ApplicationContext applicationContext = 
-            SpringApplication.run(SpringTrainingApplication.class, args);
+        ApplicationContext context = SpringApplication
+            .run(SpringTrainingApplication.class, args);
     
-        GreetingService greetingService = 
-            applicationContext.getBean("greetingService", GreetingService.class);
+        GreetingService greetingService = applicationContext
+            .getBean("greetingService", GreetingService.class);
         
-        Map<String, Person> persons = applicationContext.getBeansOfType(Person.class);
+        Map<String, Person> persons = context.getBeansOfType(Person.class);
         for (var person: persons.values()) {
             greetingService.greet(person);
         }
@@ -287,6 +287,19 @@ public class SpringTrainingApplication {
 @[7-8]
 @[10-11]
 @[13-16]
+
+---
+
+@snap[north-west]
+#### Задание №3. Объявление бинов, Java.
+@snapend
+
+@snap[west]
+@ul[list-spaced-bullets]
+- Объявить бины: **boromir, gimli, meriadoc, pippin, saruman** - через Java конфигурацию.
+- Опционально: переписать XML объявления на Java.
+@ulend
+@snapend
 
 ---
 
