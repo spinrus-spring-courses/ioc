@@ -4,6 +4,7 @@
 @snapend
 
 ---
+
 @snap[center]
 ### Предметная область
 @snapend
@@ -15,8 +16,6 @@
 @snapend
 
 ```java
-package io.itlabs.springtraining.domain.person;
-
 public abstract class Person implements Named {
 
     protected String name;
@@ -89,8 +88,6 @@ public abstract class Person implements Named {
 @snapend
 
 ```java
-package io.itlabs.springtraining;
-
 @SpringBootApplication
 @ImportResource("classpath:spring-configuration.xml")
 public class SpringTrainingApplication {
@@ -100,7 +97,6 @@ public class SpringTrainingApplication {
     }
 }
 ```
-
 @[3]
 @[4]
 @[7-9]
@@ -118,73 +114,87 @@ public class SpringTrainingApplication {
 @ulend
 @snapend
 
----
++++
 
 @snap[north-east]
 #### spring-configuration.xml
 @snapend
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans 
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
-        <constructor-arg name="name" value="Aragorn"/>
-    </bean>
-
-    <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" 
-        factory-method="withName">
-        <constructor-arg name="name" value="Legolas"/>
-    </bean>
-
-    <bean id="mageFactory" class="io.itlabs.springtraining.domain.person.MageFactory"/>
-
-    <bean id="gandalf" factory-method="withName" factory-bean="mageFactory">
-        <constructor-arg name="name" value="Gandalf"/>
-    </bean>
-
-    <bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
-        <property name="name" value="Frodo"/>
-    </bean>
-
-    <bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
-        <property name="name" value="Sam"/>
-    </bean>
-
-</beans>
+<bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
+    <constructor-arg name="name" value="Aragorn"/>
+</bean>
 ```
-@[7-9]
-@[11-14]
-@[16, 18-20]
-@[22-28]
 
----
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" factory-method="withName">
+    <constructor-arg name="name" value="Legolas"/>
+</bean>
+```
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="mageFactory" class="io.itlabs.springtraining.domain.person.MageFactory"/>
+
+<bean id="gandalf" factory-method="withName" factory-bean="mageFactory">
+    <constructor-arg name="name" value="Gandalf"/>
+</bean>
+```
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <property name="name" value="Frodo"/>
+</bean>
+
+<bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <property name="name" value="Sam"/>
+</bean>
+```
+
++++
 
 @snap[north-east]
 #### SpringTrainingApplication.java
 @snapend
 
 ```java
-package io.itlabs.springtraining;
-
 @SpringBootApplication
 @ImportResource("classpath:spring-configuration.xml")
 public class SpringTrainingApplication {
 
-    private static final Logger LOG = LoggerFactory.getLogger(SpringTrainingApplication.class);
+    private static final Logger LOG = 
+        LoggerFactory.getLogger(SpringTrainingApplication.class);
 
     public static void main(String[] args) {
-        final var applicationContext = SpringApplication.run(SpringTrainingApplication.class, args);
-        Stream.of(applicationContext.getBeanNamesForType(Person.class)).forEach(LOG::info);
+        ApplicationContext applicationContext = 
+            SpringApplication.run(SpringTrainingApplication.class, args);
+        
+        Stream
+            .of(applicationContext.getBeanNamesForType(Person.class))
+            .forEach(LOG::info);
     }
 
 }
 ```
-@[10]
-@[11]
+@[9-10]
+@[12-14]
 
 ---
 
@@ -200,18 +210,17 @@ public class SpringTrainingApplication {
 @ulend
 @snapend
 
----
++++
 
 @snap[north-east]
 #### LoggingGreetingService.java
 @snapend
 
 ```java
-package io.itlabs.springtraining.application.impl;
-
 public class LoggingGreetingService implements GreetingService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(LoggingGreetingService.class);
+    private static final Logger LOG = 
+        LoggerFactory.getLogger(LoggingGreetingService.class);
 
     private String greeting;
 
@@ -241,12 +250,12 @@ public class LoggingGreetingService implements GreetingService {
 @Service("greetingService")
 public class LoggingGreetingService implements GreetingService {
     
-@Value("Hello")
+    @Value("Hello")
     private String greeting;
 }
 ```
 @[1]
-@[3]
+@[4]
 
 +++
 
@@ -261,16 +270,22 @@ public class SpringTrainingApplication {
     
     public static void main(String[] args) {
         
-        final var applicationContext = SpringApplication.run(SpringTrainingApplication.class, args);
+        ApplicationContext applicationContext = 
+            SpringApplication.run(SpringTrainingApplication.class, args);
     
-        final var greetingService = applicationContext.getBean("greetingService", GreetingService.class);
-        for (var person: applicationContext.getBeansOfType(Person.class).values()) {
+        GreetingService greetingService = 
+            applicationContext.getBean("greetingService", GreetingService.class);
+        
+        Map<String, Person> persons = applicationContext.getBeansOfType(Person.class);
+        for (var person: persons.values()) {
             greetingService.greet(person);
         }
     }
 }
 ```
-@[8-11]
+@[7-8]
+@[10-11]
+@[13-16]
 
 ---
 
