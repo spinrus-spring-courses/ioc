@@ -196,9 +196,9 @@ public class SpringTrainingApplication {
 
 @snap[west]
 @ul[list-spaced-bullets]
-- Объявить бин сервиса приветствия **greetingService*, типа **LoggingGreetingService**.
+- Объявить бин сервиса приветствия **greetingService**, типа *LoggingGreetingService*.
 - Задать значение для атрибута **greeting**.
-- Получить из контекста все бины. Вызвать метод **greet** бина **greetingService** для каждого из бинов типа Person.
+- Получить из контекста все бины. Вызвать метод **greet** бина **greetingService** для каждого из бинов типа *Person*.
 @ulend
 @snapend
 
