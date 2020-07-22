@@ -1,17 +1,68 @@
 # Spring Framework: IoC, Dependency Injection
 
----?code=src/main/resources/spring-configuration.xml&lang=xml
-
+---
 @snap[north span-100]
-#### Source Code Delimiter
+#### Person.java
 @snapend
 
-@[6]
-@[8-11]
-@[13-16]
-@[18-21]
-@[23-31]
-@[33-41]
++++
+
+@snap[north span-100]
+#### Person.java
+@snapend
+
+```java
+public abstract class Person implements Named {
+
+    protected String name;
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+}
+```
++++?code=src/main/java/io/itlabs/springtraining/domain/Hobbit.java&lang=java
+
+@snap[north span-100]
+#### Hobbit.java
+@snapend
+
++++?code=src/main/java/io/itlabs/springtraining/domain/Human.java&lang=java
+
+@snap[north span-100]
+#### Human.java
+@snapend
+
++++?code=src/main/java/io/itlabs/springtraining/domain/Elf.java&lang=java
+
+@snap[north span-100]
+#### Elf.java
+@snapend
+
++++?code=src/main/java/io/itlabs/springtraining/domain/Dwarf.java&lang=java
+
+@snap[north span-100]
+#### Dwarf.java
+@snapend
+
++++?code=src/main/java/io/itlabs/springtraining/domain/Mage.java&lang=java
+
+@snap[north span-100]
+#### Mage.java
+@snapend
+
++++?code=src/main/java/io/itlabs/springtraining/domain/MageFactory.java&lang=java
+
+@snap[north span-100]
+#### MageFactory.java
+@snapend
+
 ---
 
 ### Add Some Slide Candy
