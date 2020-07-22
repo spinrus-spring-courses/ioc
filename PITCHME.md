@@ -125,16 +125,16 @@ public class SpringTrainingApplication {
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mageFactory" 
-          class="io.itlabs.springtraining.domain.person.MageFactory"/>
-
     <bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
         <constructor-arg name="name" value="Aragorn"/>
     </bean>
 
-    <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" factory-method="withName">
+    <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" 
+        factory-method="withName">
         <constructor-arg name="name" value="Legolas"/>
     </bean>
+
+    <bean id="mageFactory" class="io.itlabs.springtraining.domain.person.MageFactory"/>
 
     <bean id="gandalf" factory-method="withName" factory-bean="mageFactory">
         <constructor-arg name="name" value="Gandalf"/>
@@ -150,11 +150,11 @@ public class SpringTrainingApplication {
 
 </beans>
 ```
-@[8-10]
-@[12-14]
-@[16-18, 6]
-@[20-22]
+@[9-11]
+@[13-16]
+@[18, 20-22]
 @[24-26]
+@[28-30]
 @snapend
 ---
 
