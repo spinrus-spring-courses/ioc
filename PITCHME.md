@@ -111,7 +111,7 @@ public class SpringTrainingApplication {
 @snap[west span-55]
 @ul[list-spaced-bullets text-09]
 - Объявить бины: **frodo, sam, aragorn, legolas, gandalf** - через XML конфигурацию.
-- Вывести в консоль атрубут **name** всех объвленных бинов;
+- Вывести в консоль атрубут **name** всех объявленных бинов.
 @ulend
 @snapend
 
@@ -150,11 +150,11 @@ public class SpringTrainingApplication {
 
 </beans>
 ```
-@[9-11]
-@[13-16]
-@[18, 20-22]
-@[24-26]
-@[28-30]
+@[7-9]
+@[11-14]
+@[16, 18-20]
+@[22-24]
+@[26-28]
 @snapend
 ---
 
