@@ -153,8 +153,7 @@ public class SpringTrainingApplication {
 @[7-9]
 @[11-14]
 @[16, 18-20]
-@[22-24]
-@[26-28]
+@[22-28]
 @snapend
 ---
 
