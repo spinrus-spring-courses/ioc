@@ -203,6 +203,38 @@ public class SpringTrainingApplication {
 @snapend
 
 ---
+
+@snap[north-east]
+#### LoggingGreetingService.java
+@snapend
+
+```java
+package io.itlabs.springtraining.application.impl;
+
+public class LoggingGreetingService implements GreetingService {
+
+    private static final Logger LOG = LoggerFactory.getLogger(LoggingGreetingService.class);
+
+    private String greeting;
+
+    @Override
+    public void greet(Person person) {
+        LOG.info("{}, {}", greeting, person.getName());
+    }
+
+    public String getGreeting() {
+        return greeting;
+    }
+
+    public void setGreeting(String greeting) {
+        this.greeting = greeting;
+    }
+
+}
+```
+
+---
+
 ### Add Some Slide Candy
 
 ![IMAGE](assets/img/presentation.png)
