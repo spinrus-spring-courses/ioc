@@ -120,6 +120,10 @@ public class SpringTrainingApplication {
 
 ---
 
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
 @snap[north-west]
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -165,6 +169,7 @@ public class SpringTrainingApplication {
 #### SpringTrainingApplication.java
 @snapend
 
+@snap[north-west span-100]
 ```java
 package io.itlabs.springtraining;
 
@@ -183,6 +188,7 @@ public class SpringTrainingApplication {
 ```
 @[10]
 @[11]
+@snapend
 
 ---
 ### Add Some Slide Candy
