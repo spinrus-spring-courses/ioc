@@ -86,6 +86,8 @@ public abstract class Person implements Named {
 @snapend
 
 ```java
+package io.itlabs.springtraining;
+
 @SpringBootApplication
 @ImportResource("classpath:spring-configuration.xml")
 public class SpringTrainingApplication {
@@ -95,6 +97,7 @@ public class SpringTrainingApplication {
     }
 }
 ```
+
 @[1]
 @[2]
 @[5-7]
@@ -107,7 +110,7 @@ public class SpringTrainingApplication {
 
 @snap[west span-55]
 @ul[list-spaced-bullets text-09]
-- Объявить бины: Frodo, Sam, Aragorn, Legolas, Gandalf - через XML конфигурацию.
+- Объявить бины: **frodo, sam, aragorn, legolas, gandalf** - через XML конфигурацию.
 - Вывести в консоль атрубут **name** всех объвленных бинов;
 @ulend
 @snapend
