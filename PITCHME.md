@@ -373,6 +373,36 @@ public class DomainBeanDefinitions {
 @snapend
 
 +++
+@snap[north-east]
+#### Shire.java
+@snapend
+
+```java
+@Component
+public class Shire implements PersonGroup<Hobbit> {
+
+    @Autowired
+    private Hobbit frodo;
+
+    @Autowired
+    private Hobbit sam;
+
+    @Autowired
+    private Hobbit meriadoc;
+
+    @Autowired
+    private Hobbit pippin;
+
+    @Override
+    public List<Hobbit> persons() {
+        return Arrays.asList(frodo, sam, meriadoc, pippin);
+    }
+}
+```
+@[1]
+@[3,6,9,12]
+
++++
 
 @snap[north-east]
 #### Shire.java
