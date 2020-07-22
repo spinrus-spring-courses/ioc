@@ -169,7 +169,6 @@ public class SpringTrainingApplication {
 #### SpringTrainingApplication.java
 @snapend
 
-@snap[north-west span-100]
 ```java
 package io.itlabs.springtraining;
 
@@ -188,6 +187,19 @@ public class SpringTrainingApplication {
 ```
 @[10]
 @[11]
+
+---
+
+@snap[north-west]
+#### Задание №2. Объявление бинов, аннотации.
+@snapend
+
+@snap[west]
+@ul[list-spaced-bullets]
+- Объявить бин сервиса приветствия **greetingService*, типа **LoggingGreetingService**.
+- Задать значение для атрибута **greeting**.
+- Получить из контекста все бины. Вызвать метод **greet** бина **greetingService** для каждого из бинов типа Person.
+@ulend
 @snapend
 
 ---
