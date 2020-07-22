@@ -1,5 +1,17 @@
 # Spring Framework: IoC, Dependency Injection
 
+---?code=src/main/resources/spring-configuration&lang=xml
+
+@snap[north span-100]
+#### Source Code Delimiter
+@snapend
+
+@[6]
+@[8-11]
+@[13-16]
+@[18-21]
+@[23-31]
+@[33-41]
 ---
 
 ### Add Some Slide Candy
