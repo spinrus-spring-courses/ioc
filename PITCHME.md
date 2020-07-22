@@ -28,36 +28,43 @@ public abstract class Person implements Named {
 }
 ```
 +++?code=src/main/java/io/itlabs/springtraining/domain/person/Hobbit.java&lang=java
+@[3-5]
 
 @snap[north span-100]
 #### Hobbit.java
 @snapend
 
 +++?code=src/main/java/io/itlabs/springtraining/domain/person/Human.java&lang=java
+@[5-7]
 
 @snap[north span-100]
 #### Human.java
 @snapend
 
 +++?code=src/main/java/io/itlabs/springtraining/domain/person/Elf.java&lang=java
+@[5-7]
+@[9-11]
 
 @snap[north span-100]
 #### Elf.java
 @snapend
 
 +++?code=src/main/java/io/itlabs/springtraining/domain/person/Dwarf.java&lang=java
+@[5-20]
 
 @snap[north span-100]
 #### Dwarf.java
 @snapend
 
 +++?code=src/main/java/io/itlabs/springtraining/domain/person/Mage.java&lang=java
+@[5-7]
 
 @snap[north span-100]
 #### Mage.java
 @snapend
 
 +++?code=src/main/java/io/itlabs/springtraining/domain/person/MageFactory.java&lang=java
+@[5-7]
 
 @snap[north span-100]
 #### MageFactory.java
