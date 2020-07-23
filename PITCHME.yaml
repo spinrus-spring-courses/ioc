@@ -2,10 +2,10 @@
 # Doc: https://gitpitch.com/docs/themes/default
 theme            : template
 theme-background : [ "white" ]
-theme-headline   : [ "Montserrat", "#FBD95E", "none", "black", "100", "120", "15" ]
-theme-byline     : [ "Raleway", "black", "none", "#FBD95E", "100", "110", "15" ]
+theme-headline   : [ "Montserrat", "gold", "none", "black", "100", "120", "15" ]
+theme-byline     : [ "Raleway", "black", "none", "gold", "100", "110", "15" ]
 theme-text       : [ "Ubuntu", "black", "none", "#3A64C8", "100", "100", "15" ]
-theme-links      : [ "#F1C40F", "#5254F7" ]
+theme-links      : [ "gold", "#5254F7" ]
 theme-code       : [ "Source Code Pro", "100", "120" ]
 theme-controls   : [ "#C0C0C0" ]
 theme-margins    : [ "0", "15px" ]

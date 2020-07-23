@@ -1379,7 +1379,7 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 
 ---
 
-@snap[north-west]
+@snap[west]
 ### Полезные материалы
 @ul
 - [Статья М.Фаулера по инъекции зависимости @fa[external-link]](https://martinfowler.com/articles/injection.html)
