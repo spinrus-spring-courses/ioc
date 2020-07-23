@@ -90,7 +90,7 @@ public class Elf extends Person {
     }
 }
 ```
-@snap[south span-80]
+@snap[south span-60]
 @[3-5](Приватный конструктор)
 @[7-9](Фабричный метод)
 @snapend
@@ -122,7 +122,7 @@ public class Dwarf extends Person {
     }
 }
 ```
-@snap[south span-80]
+@snap[south span-60]
 @[3-18](Строитель, он же Builder)
 @snapend
 
@@ -140,7 +140,7 @@ public class Mage extends Person {
     }
 }
 ```
-@snap[south span-80]
+@snap[south span-60]
 @[3-5](Конструктор c видимостью по-умолчанию)
 @snapend
 
@@ -159,7 +159,7 @@ public class MageFactory {
 }
 
 ```
-@snap[south span-80]
+@snap[south span-60]
 @[3-5](Фабрика магов)
 @snapend
 
@@ -185,10 +185,11 @@ public class SpringTrainingApplication {
     }
 }
 ```
+@snap[south span-60]
 @[1](Магия от Spring Boot)
 @[2](Рискнем добавить немного XML)
 @[5-7](Запуск приложения)
-
+@snapend
 ---
 
 @snap[center]
@@ -304,16 +305,17 @@ public class SpringTrainingApplication {
 
 }
 ```
+@snap[south span-60]
 @[9-10](Получим контекст)
 @[12-14](Получим бины типа *Person* из контекста и выведем атрибут в консоль)
-
+@snapend
 ---
 
 @snap[center]
 ## Задание №2. Объявление бинов, аннотации.
 @snapend
 
----
++++
 
 @snap[north-west]
 ### Задание №2.1
@@ -321,8 +323,8 @@ public class SpringTrainingApplication {
 
 @snap[west]
 @ul[list-spaced-bullets]
-- Объявить бин сервиса приветствия **greetingService**, типа *LoggingGreetingService*.
-- Задать значение для атрибута **greeting**.
+- Объявить бин сервиса приветствия *greetingService*, типа *LoggingGreetingService*.
+- Задать значение для атрибута *greeting*.
 @ulend
 @snapend
 
@@ -370,9 +372,10 @@ public class LoggingGreetingService implements GreetingService {
     private String greeting;
 }
 ```
+@snap[south span-60]
 @[1](Объявление бина)
 @[4](ИНъекция зависимости, значение)
-
+@snapend
 +++
 
 @snap[north-west]
@@ -380,7 +383,7 @@ public class LoggingGreetingService implements GreetingService {
 @snapend
 
 @snap[west]
-Получить из контекста все бины. Вызвать метод **greet** бина **greetingService** для каждого из бинов типа *Person*.
+Получить из контекста все бины. Вызвать метод *greet* бина *greetingService* для каждого из бинов типа *Person*.
 @snapend
 
 +++
@@ -409,20 +412,31 @@ public class SpringTrainingApplication {
     }
 }
 ```
+@snap[south span-60]
 @[7-8](Получение контекста)
 @[10-11](Получение бина по имени)
 @[13-16](Получение бинов по типу)
-
+@snapend
 ---
 
+@snap[center]
+## Задание №3. Объявление бинов, Java.
+@snapend
+
++++
+
 @snap[north-west]
-#### Задание №3. Объявление бинов, Java.
+#### Задание №3.1
 @snapend
 
 @snap[west]
+Объявить бины:
 @ul[list-spaced-bullets]
-- Объявить бины: **boromir, gimli, meriadoc, pippin, saruman** - через Java конфигурацию.
-- Опционально: переписать XML объявления на Java.
+- boromir
+- gimli
+- meriadoc
+- pippin
+- saruman
 @ulend
 @snapend
 
@@ -472,12 +486,14 @@ public class DomainBeanDefinitions {
 
 }
 ```
-@[1]
+@snap[south span-60]
+@[1](Сам объект класса конфигурации - тоже бин)
 @[4-7]
 @[9-15]
 @[17-23]
 @[25-31]
 @[33-36]
+@snapend
 
 ---
 
