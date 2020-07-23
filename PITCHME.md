@@ -351,13 +351,7 @@ public class LoggingGreetingService implements GreetingService {
         LOG.info("{}, {}", greeting, person.getName());
     }
 
-    public String getGreeting() {
-        return greeting;
-    }
-
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
-    }
+    // Setters and getters
 
 }
 ```
@@ -388,7 +382,7 @@ public class LoggingGreetingService implements GreetingService {
 
 @snap[west]
 @ul[list-spaced-bullets]
-- Получить из контекста все типа *Person*. 
+- Получить из контекста все бины типа *Person*. 
 - Вызвать метод *greet* бина *greetingService* для каждого из них.
 @ulends
 @snapend
@@ -434,7 +428,7 @@ public class SpringTrainingApplication {
 +++?color=linear-gradient(90deg, white 50%, gold 50%)
 
 @snap[north-west]
-#### Задание №3.1
+### Задание №3.1
 @snapend
 
 @snap[west span-45]
@@ -514,7 +508,7 @@ public class DomainBeanDefinitions {
 +++
 
 @snap[north-west]
-#### Задание №4.1
+### Задание №4.1
 @snapend
 
 @snap[west]
@@ -557,7 +551,7 @@ public class Shire implements PersonGroup<Hobbit> {
 +++
 
 @snap[north-west]
-#### Задание №4.2
+### Задание №4.2
 @snapend
 
 @snap[west]
@@ -614,7 +608,7 @@ public class Shire implements PersonGroup<Hobbit> {
 +++
 
 @snap[north-west]
-#### Задание №4.3
+### Задание №4.3
 @snapend
 
 @snap[west]
@@ -660,7 +654,7 @@ public class Shire implements PersonGroup<Hobbit> {
 +++
 
 @snap[north-west]
-#### Задание №4.4
+### Задание №4.4
 @snapend
 
 @snap[west]
@@ -693,7 +687,7 @@ public class Shire implements PersonGroup<Hobbit> {
 +++
 
 @snap[north-west]
-#### Задание №4.5
+### Задание №4.5
 @snapend
 
 @snap[west]
@@ -730,21 +724,11 @@ public class SpringTrainingApplication {
 
 ---
 
-@snap[north-west]
-#### Задание №5. Scope.
+@snap[center]
+## Задание №5. Scope.
 @snapend
 
-@snap[west text-08]
-Привязать бины хоббитов как атрибуты бина *shire* разными способами:
-@ul[list-spaced-bullets]
-- Вооружить всех хоббитов кинжалами. Для этого нужно объявить бин *dagger* и модифицировать объявления хоббитов.
-- Добавить вывод информации об оружии в *LoggingGreetingService*.
-- В методе main изменить атрибут *broken* бина *dagger* на *true*. Повторить вывод в консоль.
-- Изменить *scope* бина *dagger* на *prototype*.
-@ulend
-@snapend
-
----
++++
 
 @snap[north-east]
 #### Weapon.java
@@ -787,6 +771,19 @@ public abstract class Person implements Named {
 
 +++
 
+@snap[north-west]
+### Задание №5.1
+Вооружить всех хоббитов кинжалами. Для этого нужно объявить бин *dagger* и модифицировать объявления хоббитов.
+@snapend
+
+@ul[list-spaced-bullets]
+- Добавить вывод информации об оружии в *LoggingGreetingService*.
+- В методе main изменить атрибут *broken* бина *dagger* на *true*. Повторить вывод в консоль.
+- Изменить *scope* бина *dagger* на *prototype*.
+@ulend
+
++++
+
 @snap[north-east]
 #### DomainBeanDefinitions.java
 @snapend
@@ -826,12 +823,11 @@ public class DomainBeanDefinitions {
 
 }
 ```
-@[4-7]
-@[9-19]
-@[21-31]
-
+@snap[south span-60]
+@[4-7](Добавим бин кинжала, *dagger*)
+@[11-12, 23-24] (Инъекция через вызов функции)
+@snapend
 +++
-
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -856,12 +852,11 @@ public class DomainBeanDefinitions {
     </property>
 </bean>
 ```
-@[1-8]
-@[10-18]
+@snap[south span-60]
+@[3-7б 12-16](Инъекция списка, ссылка на бин)
+@snapend
 
 +++
-
-
 
 ---
 
