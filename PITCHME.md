@@ -887,3 +887,35 @@ public class LoggingGreetingService implements GreetingService {
 ```
 
 +++
+
+@snap[north-east]
+#### SpringTrainingApplication.java
+@snapend
+
+```java
+@SpringBootApplication
+@ImportResource("classpath:spring-configuration.xml")
+public class SpringTrainingApplication {
+
+    public static void main(String[] args) {
+        final var applicationContext = SpringApplication
+            .run(SpringTrainingApplication.class, args);
+
+        final var greetingService = applicationContext
+            .getBean("greetingService", GreetingService.class);
+
+        final var shire = applicationContext.getBean("shire", Shire.class);
+        for (var person: shire.persons()) {
+            greetingService.greet(person);
+        }
+
+        final var dagger = applicationContext.getBean("dagger", Weapon.class);
+        dagger.setBroken(true);
+
+        for (var person: shire.persons()) {
+            greetingService.greet(person);
+        }
+    }
+}
+```
+@[17-22]
