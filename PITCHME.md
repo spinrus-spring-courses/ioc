@@ -543,7 +543,7 @@ public class SpringTrainingApplication {
 #### Задание №5. Scope.
 @snapend
 
-@snap[west]
+@snap[west text-08]
 Привязать бины хоббитов как атрибуты бина *shire* разными способами:
 @ul[list-spaced-bullets]
 - Вооружить всех хоббитов кинжалами. Для этого нужно объявить бин *dagger* и модифицировать объявления хоббитов.
