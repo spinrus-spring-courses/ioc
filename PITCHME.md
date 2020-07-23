@@ -572,17 +572,7 @@ public class Weapon {
         this.type = type;
     }
 
-    public Type getType() {
-        return type;
-    }
-
-    public boolean isBroken() {
-        return broken;
-    }
-
-    public void setBroken(boolean broken) {
-        this.broken = broken;
-    }
+    // Setters and getters
 }
 ```
 
@@ -598,6 +588,8 @@ public abstract class Person implements Named {
     protected String name;
 
     protected List<Weapon> weapons;
+    
+    // Setters and getters
 
 }
 ```
