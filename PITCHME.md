@@ -202,8 +202,11 @@ public class SpringTrainingApplication {
 ### Задание №1.1
 @snapend
 
-@snap[west]
-Объявить бины в *spring-configuration.xml*:
+@snap[west span-45]
+Объявить бины в *spring-configuration.xml*
+@snapend
+
+@snap[east span-45]
 @ul[list-spaced-bullets]
 - frodo
 - sam
