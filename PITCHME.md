@@ -855,3 +855,13 @@ public class DomainBeanDefinitions {
 @snap[south span-60]
 @[3-7б 12-16](Инъекция списка, ссылка на бин)
 @snapend
+
++++
+
+@snap[north-west]
+### Задание №5.2
+В методе main изменить атрибут *broken* бина *dagger* на *true*. Повторить вывод в консоль.
+@snapend
+
++++
+
