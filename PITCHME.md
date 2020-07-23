@@ -191,15 +191,17 @@ public class SpringTrainingApplication {
 
 ---
 
-@snap[west]
+@snap[center]
 ## Задание №1. Объявление бинов, XML.
 @snapend
 
 +++
 
-@snap[west]
+@snap[north-west]
 ### Задание №1.1
+@snapend
 
+@snap[west]
 Объявить бины в *spring-configuration.xml*:
 @ul[list-spaced-bullets]
 - frodo
@@ -269,9 +271,11 @@ public class SpringTrainingApplication {
 
 +++
 
-@snap[west]
+@snap[north-west]
 ### Задание №1.2
+@snapend
 
+@snap[west]
 Вывести в консоль атрубут *name* всех объявленных бинов
 @snapend
 
@@ -305,21 +309,20 @@ public class SpringTrainingApplication {
 
 ---
 
-@snap[west]
-### Задание №2. Объявление бинов, аннотации.
+@snap[center]
+## Задание №2. Объявление бинов, аннотации.
 @snapend
 
 ---
 
 @snap[north-west]
-#### Задание №2. Объявление бинов, аннотации.
+### Задание №2.1
 @snapend
 
 @snap[west]
 @ul[list-spaced-bullets]
 - Объявить бин сервиса приветствия **greetingService**, типа *LoggingGreetingService*.
 - Задать значение для атрибута **greeting**.
-- Получить из контекста все бины. Вызвать метод **greet** бина **greetingService** для каждого из бинов типа *Person*.
 @ulend
 @snapend
 
@@ -367,8 +370,18 @@ public class LoggingGreetingService implements GreetingService {
     private String greeting;
 }
 ```
-@[1]
-@[4]
+@[1](Объявление бина)
+@[4](ИНъекция зависимости, значение)
+
++++
+
+@snap[north-west]
+### Задание №2.2
+@snapend
+
+@snap[west]
+Получить из контекста все бины. Вызвать метод **greet** бина **greetingService** для каждого из бинов типа *Person*.
+@snapend
 
 +++
 
@@ -396,9 +409,9 @@ public class SpringTrainingApplication {
     }
 }
 ```
-@[7-8]
-@[10-11]
-@[13-16]
+@[7-8](Получение контекста)
+@[10-11](Получение бина по имени)
+@[13-16](Получение бинов по типу)
 
 ---
 
