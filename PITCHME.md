@@ -17,9 +17,11 @@
 
 ---
 
-@snap[north-west]
-### Предметная область
+@snap[center]
+### А теперь практика
 @snapend
+
+---
 
 @snap[north-east]
 #### Person.java
