@@ -21,7 +21,7 @@ Spring Framework: IoC, Dependency Injection
 ---
 
 @snap[center]
-## Что будет на тренинге?
+## План действий
 @ul
 - Немного поговорим об инверсии контроля и внедрении зависимостей.
 - Практическая часть. Поcмотрим, как эти принципы используется в Spring Framework.
@@ -38,10 +38,6 @@ Spring Framework: IoC, Dependency Injection
 
 @snap[north-west]
 #### Без внедрения зависимости
-@snapend
-
-@snap[north-east]
-#### Aragorn.java
 @snapend
 
 ```java
@@ -65,10 +61,6 @@ Note:
 #### А теперь с внедрением
 @snapend
 
-@snap[north-east]
-#### Aragorn.java
-@snapend
-
 ```java
 class Aragorn {
   
@@ -79,9 +71,6 @@ class Aragorn {
     }
 }
 ```
-@snap[south-east text-green text-05]
-@box[](Плюсы: мы разделили код на модули. Связность уменьшилась, Арагорн больше не знает, какое конкретное оружие получит.)
-@snapend
 
 Note:
 Теперь представим, что Арагорн принимает оружие, которое ему передаст кто-то другой. Владыка Элронд, например.
@@ -99,10 +88,12 @@ Note:
 
 ```java
 public class Example {
+
     public static void main(String[] args) {
         Weapon andril = new Sword("Andril");
         Aragorn aragorn = new Aragorn(andril);
     }
+
 }
 ```
 Note:
@@ -110,11 +101,8 @@ Note:
 
 +++
 
-@snap[north-west]
-#### Плюсы применения внедрения зависимости
-@snapend
-
 @snap[west]
+#### Плюсы применения внедрения зависимости
 @ul
 - Снижает связность кода
 - Повышает тестируемость
@@ -123,11 +111,8 @@ Note:
 
 +++
 
-@snap[north-west]
-#### Минусы применения внедрения зависимости
-@snapend
-
 @snap[west]
+#### Минусы применения внедрения зависимости
 @ul
 - Усложняет логику компонования агрегатов
 - Усложняет управление жизненным циклом объектов, т.к. за их создание отвечает класс-посредник.
@@ -139,7 +124,7 @@ Note:
 
 +++
 
-@snap[center]
+@snap[center text-left]
 ### Инверсия контроля (Inversion of Control)
 Внедрение зависимости (*DependencyInjection*) - это частный случай инверсии управления или контроля (*Inversion of Control*).
 Это ситуация, когда потоком управления программы управляет фреймворк, а программист встраивает свою логику с помощью предусмотренных точек расширения, то программист перестает контролировать ход выполнения программы.
@@ -163,6 +148,16 @@ Note:
 - В основе лежит Spring IoC Container - контейнер инверсии управления.
 - На базе Spring Framework'a основано множество проектов: Spring Boot, Spring Data, Spring Security и д.р.
 @ulend
+@snapend
+
++++
+
+@snap[north-west]
+#### Spring Framework
+@snapend
+
+@snap[center span-100 fragment]
+@img[shadow](assets/img/container-magic.png)
 @snapend
 
 ---
