@@ -21,8 +21,33 @@ Spring Framework: IoC, Dependency Injection
 ---
 
 @snap[center]
-#### Здесь должно быть несколько слайдов про инъекцию зависимостей
+## Что будет на тренинге?
+@ul
+- Немного поговорим об инверсии контроля и инъекции зависимостей.
+- Поcмотрим как этот принцип используется в Spring Framework.
+@ulend
 @snapend
+
+---
+@snap[north-west]
+#### Без внедрения зависимости
+@snapend
+
+@snap[north-east]
+#### Aragorn.java
+@snapend
+
+```java
+class Aragorn {
+  
+    private Weapon andril = new Sword("Andril");
+
+}
+```
+
+Note:
+Представим класс Aragorn. Бедняге, чтобы выполнить свои задачи, нужен меч. 
+И этот класс берет ответственность за создание своих зависимостей (т.е. меча) на себя.
 
 ---
 
