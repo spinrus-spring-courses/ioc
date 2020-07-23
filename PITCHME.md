@@ -23,12 +23,13 @@ Spring Framework: IoC, Dependency Injection
 @snap[center]
 ## Что будет на тренинге?
 @ul
-- Немного поговорим об инверсии контроля и инъекции зависимостей.
+- Немного поговорим об инверсии контроля и внедрении зависимостей.
 - Поcмотрим как этот принцип используется в Spring Framework.
 @ulend
 @snapend
 
 ---
+
 @snap[north-west]
 #### Без внедрения зависимости
 @snapend
@@ -49,6 +50,50 @@ Note:
 Представим класс Aragorn. Бедняге, чтобы выполнить свои задачи, нужен меч. 
 И этот класс берет ответственность за создание своих зависимостей (т.е. меча) на себя.
 
++++
+
+@snap[north-west]
+#### А теперь с внедрением
+@snapend
+
+@snap[north-east]
+#### Aragorn.java
+@snapend
+
+```java
+class Aragorn {
+  
+    private Weapon weapon;
+
+    public Aragorn(Weapon weapon) {
+        this.weapon = weapon;
+    }
+}
+```
+
+Note:
+Теперь представим, что Арагорн принимает оружие, которое ему передаст кто-то другой. Владыка Элронд, например.
+
++++
+
+@snap[north-west]
+#### А теперь с внедрением
+@snapend
+
+@snap[north-east]
+#### Example.java
+@snapend
+
+```java
+public class Example {
+    public static void main(String[] args) {
+        Weapon andril = new Sword("Andril");
+        Aragorn aragorn = new Aragorn(andril);
+    }
+}
+```
+Note:
+Это пример внедрения на базе конструктора. Здесь мы выполнили внедрение вручную, но с этим нам может помочь фреймворк.
 ---
 
 @snap[center]
@@ -424,7 +469,7 @@ public class LoggingGreetingService implements GreetingService {
 ```
 @snap[south span-60]
 @[1](Объявление бина)
-@[4](Инъекция зависимости, значение)
+@[4](Внедрение зависимости, значение)
 @snapend
 +++
 
@@ -558,7 +603,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[center]
-## Задание №4. Инъекция зависимости.
+## Задание №4. Внедрение зависимости.
 @snapend
 
 @snap[south]
@@ -572,7 +617,7 @@ public class DomainBeanDefinitions {
 @snapend
 
 @snap[west]
-Привязать бины хоббитов как атрибуты бина *shire* инъекцией атрибута (*field injection*)
+Привязать бины хоббитов как атрибуты бина *shire* внедрением атрибута (*field injection*)
 @snapend
 
 +++
@@ -615,7 +660,7 @@ public class Shire implements PersonGroup<Hobbit> {
 @snapend
 
 @snap[west]
-Привязать бины хоббитов как атрибуты бина *shire* инъекцией через сеттер (*setter-based injection*)
+Привязать бины хоббитов как атрибуты бина *shire* внедрением на базе сеттер (*setter-based injection*)
 @snapend
 
 +++
@@ -672,7 +717,7 @@ public class Shire implements PersonGroup<Hobbit> {
 @snapend
 
 @snap[west]
-Привязать бины хоббитов как атрибуты бина *shire* через конструктор (*constructor-based injection*)
+Привязать бины хоббитов как атрибуты бина *shire* на базе конструктора (*constructor-based injection*)
 @snapend
 
 +++
@@ -883,7 +928,7 @@ public class DomainBeanDefinitions {
 ```
 @snap[south span-60]
 @[4-7](Добавим бин кинжала, *dagger*)
-@[11-12, 23-24] (Инъекция через вызов функции)
+@[11-12, 23-24] (Внедрение через вызов функции)
 @snapend
 
 +++
@@ -912,7 +957,7 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 @snap[south span-60]
-@[3-7б 12-16](Инъекция списка, ссылка на бин)
+@[3-7б 12-16](Внедрение списка, ссылка на бин)
 @snapend
 
 +++
@@ -1422,7 +1467,7 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 ### Полезные материалы
 @ul
 - [Статья М.Фаулера по инъекции зависимости @fa[external-link]](https://martinfowler.com/articles/injection.html)
-- [Инъекция зависимости(Wiki) @fa[external-link]](https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8)
+- [Внедрение зависимости(Wiki) @fa[external-link]](https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8)
 - [Spring Framework Docs @fa[external-link]](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-introduction)
 - [Репозиторий проекта @fa[external-link]](https://github.com/spinrus-spring-courses/ioc)
 @ulend
