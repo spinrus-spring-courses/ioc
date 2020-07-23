@@ -594,6 +594,47 @@ public abstract class Person implements Named {
 }
 ```
 
++++
+
+```java
+@Configuration
+public class DomainBeanDefinitions {
+
+    @Bean
+    public Weapon dagger() {
+        return new Weapon(DAGGER);
+    }
+
+    @Bean
+    public Hobbit meriadoc() {
+        final List<Weapon> weapons = new ArrayList<>();
+        weapons.add(dagger());
+
+        final var hobbit = new Hobbit();
+        hobbit.setName("Meriadoc");
+        hobbit.setWeapons(weapons);
+
+        return hobbit;
+    }
+
+    @Bean
+    public Hobbit pippin() {
+        final List<Weapon> weapons = new ArrayList<>();
+        weapons.add(dagger());
+
+        final var hobbit = new Hobbit();
+        hobbit.setName("Pippin");
+        hobbit.setWeapons(weapons);
+
+        return hobbit;
+    }
+
+}
+```
+@[4-7]
+@[9-19]
+@[21-31]
+
 ---
 
 ### Add Some Slide Candy
