@@ -196,7 +196,7 @@ public class SpringTrainingApplication {
 ## Задание №1. Объявление бинов, XML.
 @snapend
 
-+++color=linear-gradient(90deg, white 50%, gold 50%)
++++?color=linear-gradient(180deg, white 50%, gold 50%)
 
 @snap[north-west]
 ### Задание №1.1
