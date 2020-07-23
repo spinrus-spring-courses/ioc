@@ -1152,3 +1152,196 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 }
 ```
 @[6-8]
+
++++
+
+@snap[north-west]
+### Задание №6.2
+Заполнить список участников братства кольца, *fellowshipOfTheRing*. Использовать свою аннотацию.
+@snapend
+
++++
+
+@snap[north-east]
+#### Walker.java
+@snapend
+
+```java
+@Target({ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.TYPE, ElementType.ANNOTATION_TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Inherited
+@Documented
+@Qualifier("kind")
+public @interface Walker {
+
+}
+```
+@[5-8](Qualifier - аннотация на аннотации)
+
++++
+
+@snap[north-east]
+#### DomainBeanDefinitions.java
+@snapend
+
+```java
+@Configuration
+public class DomainBeanDefinitions {
+
+    @Bean
+    @Scope("prototype")
+    public Weapon dagger() {
+        return new Weapon(DAGGER);
+    }
+
+    @Bean
+    @Walker
+    public Human boromir() {
+        return new Human("Boromir");
+    }
+
+    @Bean
+    @Walker
+    public Dwarf gimli() {
+        return new Dwarf
+                .DwarfBuilder()
+                .withName("Gimli")
+                .build();
+    }
+
+    @Bean
+    @Walker
+    public Hobbit meriadoc() {
+        final List<Weapon> weapons = new ArrayList<>();
+        weapons.add(dagger());
+
+        final var hobbit = new Hobbit();
+        hobbit.setName("Meriadoc");
+        hobbit.setWeapons(weapons);
+
+        return hobbit;
+    }
+
+    @Bean
+    @Walker
+    public Hobbit pippin() {
+        final List<Weapon> weapons = new ArrayList<>();
+        weapons.add(dagger());
+
+        final var hobbit = new Hobbit();
+        hobbit.setName("Pippin");
+        hobbit.setWeapons(weapons);
+
+        return hobbit;
+    }
+
+    @Bean
+    public Mage saruman(MageFactory mageFactory) {
+        return mageFactory.withName("Saruman");
+    }
+
+}
+```
+@[10-14]
+@[16-23]
+@[25-36]
+@[38-49]
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
+    <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+    <constructor-arg name="name" value="Aragorn"/>
+</bean>
+```
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" factory-method="withName">
+    <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+    <constructor-arg name="name" value="Legolas"/>
+</bean>
+```
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="gandalf" factory-method="withName" factory-bean="mageFactory">
+    <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+    <constructor-arg name="name" value="Gandalf"/>
+</bean>
+```
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+    <property name="name" value="Frodo"/>
+    <property name="weapons">
+        <list>
+            <ref bean="dagger"/>
+        </list>
+    </property>
+</bean>
+```
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <qualifier type="io.itlabs.springtraining.configuration.Walker"/>
+    <property name="name" value="Sam"/>
+    <property name="weapons">
+        <list>
+            <ref bean="dagger"/>
+        </list>
+    </property>
+</bean>
+```
+
++++
+
+@snap[north-east]
+#### FellowshipOfTheRing.java
+@snapend
+
+```java
+@Component
+public class FellowshipOfTheRing implements PersonGroup<Person> {
+
+    private final List<Person> persons;
+
+    public FellowshipOfTheRing(@Walker List<Person> persons) {
+        this.persons = persons;
+    }
+
+    @Override
+    public List<Person> persons() {
+        return persons;
+    }
+}
+```
+@[6-8]

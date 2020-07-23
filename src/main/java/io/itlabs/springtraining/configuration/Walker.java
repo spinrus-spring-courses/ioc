@@ -10,4 +10,5 @@ import java.lang.annotation.*;
 @Documented
 @Qualifier("kind")
 public @interface Walker {
+
 }
