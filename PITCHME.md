@@ -44,47 +44,122 @@ public abstract class Person implements Named {
 }
 ```
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Hobbit.java&lang=java
-@[3-5]
++++
 
 @snap[north-east]
 #### Hobbit.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Human.java&lang=java
-@[5-7]
+```java
+public class Hobbit extends Person {
+
+}
+```
+
++++
 
 @snap[north-east]
 #### Human.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Elf.java&lang=java
-@[5-7]
-@[9-11]
+```java
+public class Human extends Person {
+
+    public Human(String name) {
+        this.name = name;
+    }
+}
+```
+
++++
 
 @snap[north-east]
 #### Elf.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Dwarf.java&lang=java
-@[5-20]
+```java
+public class Elf extends Person {
+
+    private Elf(String name) {
+        this.name = name;
+    }
+
+    public static Elf withName(String name) {
+        return new Elf(name);
+    }
+}
+```
+@snap[south span-80]
+@[3-5](Приватный конструктор)
+@[7-9](Фабричный метод)
+@snapend
+
++++
 
 @snap[north-east]
 #### Dwarf.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/Mage.java&lang=java
-@[5-7]
+```java
+public class Dwarf extends Person {
+
+    public static class DwarfBuilder {
+
+        private String name;
+
+        public DwarfBuilder withName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Dwarf build() {
+            Dwarf dwarf = new Dwarf();
+            dwarf.name = name;
+
+            return dwarf;
+        }
+    }
+}
+```
+@snap[south span-80]
+@[3-18](Конструктор, он же - Builder)
+@snapend
+
++++
 
 @snap[north-east]
 #### Mage.java
 @snapend
 
-+++?code=src/main/java/io/itlabs/springtraining/domain/person/MageFactory.java&lang=java
-@[3-8]
+```java
+public class Mage extends Person {
+
+    Mage(String name) {
+        this.name = name;
+    }
+}
+```
+@snap[south span-80]
+@[3-5](Конструктор c видимостью по-умолчанию)
+@snapend
+
++++
 
 @snap[north-east]
 #### MageFactory.java
+@snapend
+
+```java
+public class MageFactory {
+
+    public Mage withName(String name) {
+        return new Mage(name);
+    }
+}
+
+```
+@snap[south span-80]
+@[3-5](Фабрика магов)
 @snapend
 
 ---
@@ -109,20 +184,27 @@ public class SpringTrainingApplication {
     }
 }
 ```
-@[1]
-@[2]
-@[5-7]
+@[1](Магия от Spring Boot)
+@[2](Рискнем добавить немного XML)
+@[5-7](Запуск приложения)
 
 ---
 
-@snap[north-west]
-#### Задание №1. Объявление бинов, XML.
+@snap[west]
+### Задание №1 Объявление бинов, XML.
 @snapend
 
++++
+
 @snap[west]
+### Задание №1.1
+Объявить бины в *spring-configuration.xml*:
 @ul[list-spaced-bullets]
-- Объявить бины: **frodo, sam, aragorn, legolas, gandalf** - через XML конфигурацию.
-- Вывести в консоль атрубут **name** всех объявленных бинов.
+- frodo
+- sam
+- aragorn
+- legolas
+- gandalf
 @ulend
 @snapend
 
@@ -185,6 +267,13 @@ public class SpringTrainingApplication {
 
 +++
 
+@snap[west]
+### Задание №1.2 Объявление бинов, XML.
+Вывести в консоль атрубут *name* всех объявленных бинов
+@snapend
+
++++
+
 @snap[north-east]
 #### SpringTrainingApplication.java
 @snapend
@@ -208,8 +297,8 @@ public class SpringTrainingApplication {
 
 }
 ```
-@[9-10]
-@[12-14]
+@[9-10](Получим контекст)
+@[12-14](Получим бины типа *Person* из контекста и выведем атрибут в консоль)
 
 ---
 
