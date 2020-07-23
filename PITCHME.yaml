@@ -12,7 +12,7 @@ theme-margins    : [ "0", "15px" ]
 
 # Highlight Setting
 # Doc: https://gitpitch.com/docs/settings/highlight
-highlight : darcula
+highlight : idea
 
 # Theme-Override Setting
 # Doc: https://gitpitch.com/docs/settings/custom-theme
