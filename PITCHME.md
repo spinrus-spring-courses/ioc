@@ -1135,3 +1135,25 @@ public class DomainBeanDefinitions {
 @[2]
 
 +++
+
+@snap[north-east]
+#### FellowshipOfTheRing.java
+@snapend
+
+```java
+@Component
+public class FellowshipOfTheRing implements PersonGroup<Person> {
+
+    private final List<Person> persons;
+
+    public FellowshipOfTheRing(@Qualifier("kind") List<Person> persons) {
+        this.persons = persons;
+    }
+
+    @Override
+    public List<Person> persons() {
+        return persons;
+    }
+}
+```
+@[6-8]
