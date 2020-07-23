@@ -224,8 +224,10 @@ public class SpringTrainingApplication {
 @snapend
 
 ```xml
-<bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
-    <constructor-arg name="name" value="Aragorn"/>
+<bean>
+    <bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
+        <constructor-arg name="name" value="Aragorn"/>
+    </bean>
 </bean>
 ```
 
@@ -236,10 +238,12 @@ public class SpringTrainingApplication {
 @snapend
 
 ```xml
-<bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" 
-      factory-method="withName">
-    <constructor-arg name="name" value="Legolas"/>
-</bean>
+<beans>
+    <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" 
+          factory-method="withName">
+        <constructor-arg name="name" value="Legolas"/>
+    </bean>
+</beans>
 ```
 
 +++
@@ -249,13 +253,15 @@ public class SpringTrainingApplication {
 @snapend
 
 ```xml
-<bean id="mageFactory" 
-      class="io.itlabs.springtraining.domain.person.MageFactory"/>
-
-<bean id="gandalf" factory-method="withName" 
-      factory-bean="mageFactory">
-    <constructor-arg name="name" value="Gandalf"/>
-</bean>
+<beans>
+    <bean id="mageFactory" 
+          class="io.itlabs.springtraining.domain.person.MageFactory"/>
+    
+    <bean id="gandalf" factory-method="withName" 
+          factory-bean="mageFactory">
+        <constructor-arg name="name" value="Gandalf"/>
+    </bean>
+</beans>
 ```
 
 +++
@@ -828,23 +834,25 @@ public class DomainBeanDefinitions {
 @snapend
 
 ```xml
-<bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
-    <property name="name" value="Frodo"/>
-    <property name="weapons">
-        <list>
-            <ref bean="dagger"/>
-        </list>
-    </property>
-</bean>
-
-<bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
-    <property name="name" value="Sam"/>
-    <property name="weapons">
-        <list>
-            <ref bean="dagger"/>
-        </list>
-    </property>
-</bean>
+<beans>
+    <bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
+        <property name="name" value="Frodo"/>
+        <property name="weapons">
+            <list>
+                <ref bean="dagger"/>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
+        <property name="name" value="Sam"/>
+        <property name="weapons">
+            <list>
+                <ref bean="dagger"/>
+            </list>
+        </property>
+    </bean>
+</beans>
 ```
 @snap[south span-60]
 @[3-7б 12-16](Инъекция списка, ссылка на бин)
