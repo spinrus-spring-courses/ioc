@@ -596,6 +596,10 @@ public abstract class Person implements Named {
 
 +++
 
+@snap[north-east]
+#### DomainBeanDefinitions.java
+@snapend
+
 ```java
 @Configuration
 public class DomainBeanDefinitions {
@@ -634,6 +638,39 @@ public class DomainBeanDefinitions {
 @[4-7]
 @[9-19]
 @[21-31]
+
++++
+
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <property name="name" value="Frodo"/>
+    <property name="weapons">
+        <list>
+            <ref bean="dagger"/>
+        </list>
+    </property>
+</bean>
+
+<bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <property name="name" value="Sam"/>
+    <property name="weapons">
+        <list>
+            <ref bean="dagger"/>
+        </list>
+    </property>
+</bean>
+```
+@[1-8]
+@[10-18]
+
++++
+
+
 
 ---
 
