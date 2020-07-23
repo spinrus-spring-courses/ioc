@@ -9,7 +9,6 @@ theme-links      : [ "#F1C40F", "#5254F7" ]
 theme-code       : [ "Source Code Pro", "100", "120" ]
 theme-controls   : [ "#C0C0C0" ]
 theme-margins    : [ "0", "15px" ]
-layout           : center
 
 # Highlight Setting
 # Doc: https://gitpitch.com/docs/settings/highlight
