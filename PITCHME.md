@@ -821,6 +821,7 @@ public class DomainBeanDefinitions {
 @[4-7](Добавим бин кинжала, *dagger*)
 @[11-12, 23-24] (Инъекция через вызов функции)
 @snapend
+
 +++
 
 @snap[north-east]
@@ -1055,3 +1056,16 @@ public class DomainBeanDefinitions {
 
 +++
 
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
+    <qualifier value="kind"/>
+    <constructor-arg name="name" value="Aragorn"/>
+</bean>
+```
+@[2]
+
++++
