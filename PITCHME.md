@@ -387,7 +387,10 @@ public class LoggingGreetingService implements GreetingService {
 @snapend
 
 @snap[west]
-Получить из контекста все бины. Вызвать метод *greet* бина *greetingService* для каждого из бинов типа *Person*.
+@ul[list-spaced-bullets]
+- Получить из контекста все типа *Person*. 
+- Вызвать метод *greet* бина *greetingService* для каждого из них.
+@ulends
 @snapend
 
 +++
@@ -491,7 +494,6 @@ public class DomainBeanDefinitions {
     public Mage saruman(MageFactory mageFactory) {
         return mageFactory.withName("Saruman");
     }
-
 }
 ```
 @snap[south span-60]
@@ -512,18 +514,11 @@ public class DomainBeanDefinitions {
 +++
 
 @snap[north-west]
-#### Задание №4. Инъекция зависимости.
-@snapend
-
-+++
-
-@snap[north-west]
 #### Задание №4.1
 @snapend
 
 @snap[west]
-Привязать бины хоббитов как атрибуты бина *shire*
-инъекцией атрибута (*field injection*)
+Привязать бины хоббитов как атрибуты бина *shire* инъекцией атрибута (*field injection*)
 @snapend
 
 +++
@@ -566,8 +561,7 @@ public class Shire implements PersonGroup<Hobbit> {
 @snapend
 
 @snap[west]
-Привязать бины хоббитов как атрибуты бина *shire*
-инъекцией через сеттер (*setter-based injection*)
+Привязать бины хоббитов как атрибуты бина *shire* инъекцией через сеттер (*setter-based injection*)
 @snapend
 
 +++
@@ -624,8 +618,7 @@ public class Shire implements PersonGroup<Hobbit> {
 @snapend
 
 @snap[west]
-Привязать бины хоббитов как атрибуты бина *shire*
-через конструктор (*constructor-based injection*)
+Привязать бины хоббитов как атрибуты бина *shire* через конструктор (*constructor-based injection*)
 @snapend
 
 +++
