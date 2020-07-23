@@ -1,15 +1,25 @@
 @snap[center]
-### Lord of The Spring
+## Lord of The Spring
 #### Spring Framework: IoC, Dependency Injection
 @snapend
 
 ---
 
 @snap[center]
-### Предметная область
+#### Здесь должно быть несколько слайдов про инъекцию зависимостей
 @snapend
 
 ---
+
+@snap[center]
+#### Здесь должно быть несколько слайдов про Spring Framework
+@snapend
+
+---
+
+@snap[north-west]
+### Предметная область
+@snapend
 
 @snap[north-east]
 #### Person.java
