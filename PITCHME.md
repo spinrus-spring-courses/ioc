@@ -1095,3 +1095,25 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 @[2]
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <qualifier value="kind"/>
+    <property name="name" value="Frodo"/>
+    <property name="weapons">
+        <list>
+            <ref bean="dagger"/>
+        </list>
+    </property>
+</bean>
+```
+@[2]
+
++++
+
