@@ -865,3 +865,25 @@ public class DomainBeanDefinitions {
 
 +++
 
+@snap[north-east]
+#### LoggingGreetingService.java
+@snapend
+
+```java
+@Service("greetingService")
+public class LoggingGreetingService implements GreetingService {
+
+    // ...
+
+    @Override
+    public void greet(Person person) {
+        LOG.info("{}, {}", greeting, person.getName());
+        LOG.info("{}, weapons {}", person.getName(), person.getWeapons());
+    }
+    
+    // ...
+
+}
+```
+
++++
