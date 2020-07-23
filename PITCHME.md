@@ -946,5 +946,5 @@ public class DomainBeanDefinitions {
 }
 ```
 @snap[south span-60]
-@[5](Теперь каждый зависимы бин получит свой экземпляр)
+@[5](Теперь каждый получит свой экземпляр)
 @snapend
