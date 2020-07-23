@@ -1117,3 +1117,21 @@ public class DomainBeanDefinitions {
 
 +++
 
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <qualifier value="kind"/>
+    <property name="name" value="Sam"/>
+    <property name="weapons">
+        <list>
+            <ref bean="dagger"/>
+        </list>
+    </property>
+</bean>
+```
+@[2]
+
++++
