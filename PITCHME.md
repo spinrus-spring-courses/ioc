@@ -198,6 +198,9 @@ public class SpringTrainingApplication {
 
 @snap[center]
 ## Задание №1. Объявление бинов, XML.
+@snapend
+
+@snap[south]
 1-BeanDefinitionXml/Task
 @snapend
 
@@ -324,6 +327,10 @@ public class SpringTrainingApplication {
 ## Задание №2. Объявление бинов, аннотации.
 @snapend
 
+@snap[south]
+2-BeanDefinitionAnnotation/Task
+@snapend
+
 +++
 
 @snap[north-west]
@@ -430,6 +437,10 @@ public class SpringTrainingApplication {
 ## Задание №3. Объявление бинов, Java.
 @snapend
 
+@snap[south]
+3-BeanDefinitionJava/Task
+@snapend
+
 +++?color=linear-gradient(90deg, white 65%, gold 35%)
 
 @snap[north-west]
@@ -508,6 +519,10 @@ public class DomainBeanDefinitions {
 
 @snap[center]
 ## Задание №4. Инъекция зависимости.
+@snapend
+
+@snap[south]
+4-DependencyInjection/Task
 @snapend
 
 +++
@@ -731,6 +746,10 @@ public class SpringTrainingApplication {
 
 @snap[center]
 ## Задание №5. Scope.
+@snapend
+
+@snap[south]
+5-BeanScope/Task
 @snapend
 
 +++
@@ -959,6 +978,10 @@ public class DomainBeanDefinitions {
 
 @snap[center]
 ## Задание №6. Квалификаторы.
+@snapend
+
+@snap[south]
+6-Qualifiers/Task
 @snapend
 
 +++
