@@ -1069,3 +1069,15 @@ public class DomainBeanDefinitions {
 @[2]
 
 +++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" factory-method="withName">
+    <qualifier value="kind"/>
+    <constructor-arg name="name" value="Legolas"/>
+</bean>
+```
+@[2]
