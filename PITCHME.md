@@ -1,6 +1,7 @@
 @snap[center]
-## Lord of The Spring
-#### Spring Framework: IoC, Dependency Injection
+# Lord of The Spring
+
+Spring Framework: IoC, Dependency Injection
 @snapend
 
 ---
@@ -122,7 +123,7 @@ public class Dwarf extends Person {
 }
 ```
 @snap[south span-80]
-@[3-18](Конструктор, он же - Builder)
+@[3-18](Строитель, он же Builder)
 @snapend
 
 +++
@@ -191,13 +192,14 @@ public class SpringTrainingApplication {
 ---
 
 @snap[west]
-### Задание №1 Объявление бинов, XML.
+## Задание №1. Объявление бинов, XML.
 @snapend
 
 +++
 
 @snap[west]
 ### Задание №1.1
+
 Объявить бины в *spring-configuration.xml*:
 @ul[list-spaced-bullets]
 - frodo
@@ -268,7 +270,8 @@ public class SpringTrainingApplication {
 +++
 
 @snap[west]
-### Задание №1.2 Объявление бинов, XML.
+### Задание №1.2
+
 Вывести в консоль атрубут *name* всех объявленных бинов
 @snapend
 
@@ -299,6 +302,12 @@ public class SpringTrainingApplication {
 ```
 @[9-10](Получим контекст)
 @[12-14](Получим бины типа *Person* из контекста и выведем атрибут в консоль)
+
+---
+
+@snap[west]
+### Задание №2. Объявление бинов, аннотации.
+@snapend
 
 ---
 
