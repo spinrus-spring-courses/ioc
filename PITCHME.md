@@ -2,8 +2,11 @@
 ## Михаил Ильиных
 ### Команда Hybris
 
-Опыт Java и Spring разработки 4-5 лет, из них активной 1-2 года
-Oracle Certified Professional, Java SE 8 Programmer
+@ul
+- Опыт Java и Spring разработки 4-5 лет, из них активной 1-2 года
+- Oracle Certified Professional, Java SE 8 Programmer
+- А еще я ООП в университете преподавал
+@endul
 
 @snapend
 
