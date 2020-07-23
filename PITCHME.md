@@ -378,7 +378,7 @@ public class LoggingGreetingService implements GreetingService {
 ```
 @snap[south span-60]
 @[1](Объявление бина)
-@[4](ИНъекция зависимости, значение)
+@[4](Инъекция зависимости, значение)
 @snapend
 +++
 
@@ -421,20 +421,24 @@ public class SpringTrainingApplication {
 @[10-11](Получение бина по имени)
 @[13-16](Получение бинов по типу)
 @snapend
+
 ---
 
 @snap[center]
 ## Задание №3. Объявление бинов, Java.
 @snapend
 
-+++
++++?color=linear-gradient(90deg, white 50%, gold 50%)
 
 @snap[north-west]
 #### Задание №3.1
 @snapend
 
-@snap[west]
-Объявить бины:
+@snap[west span-45]
+Объявить бины
+@snapend
+
+@snap[east span-45]
 @ul[list-spaced-bullets]
 - boromir
 - gimli
@@ -491,7 +495,7 @@ public class DomainBeanDefinitions {
 }
 ```
 @snap[south span-60]
-@[1](Сам объект класса конфигурации - тоже бин)
+@[1](Конфигурация - тоже бин)
 @[4-7]
 @[9-15]
 @[17-23]
@@ -501,18 +505,25 @@ public class DomainBeanDefinitions {
 
 ---
 
+@snap[center]
+## Задание №4. Инъекция зависимости.
+@snapend
+
++++
+
 @snap[north-west]
 #### Задание №4. Инъекция зависимости.
 @snapend
 
++++
+
+@snap[north-west]
+#### Задание №4.1
+@snapend
+
 @snap[west]
-Привязать бины хоббитов как атрибуты бина **shire** разными способами:
-@ul[list-spaced-bullets]
-- Инъекция атрибута (field injection).
-- Инъекция через сеттер (setter-based injection).
-- Инъекция через конструктор (constructor-based injection).
-- Вывести имена всех жителей Шира(*Shire*) c помощью метода **persons** бина **shire**.
-@ulend
+Привязать бины хоббитов как атрибуты бина *shire*
+инъекцией атрибута (*field injection*)
 @snapend
 
 +++
@@ -543,8 +554,21 @@ public class Shire implements PersonGroup<Hobbit> {
     }
 }
 ```
-@[1]
-@[4-14]
+@snap[south span-60]
+@[1](*Shire* - это бин)
+@[4-14](Никогда так не делайте)
+@snapend
+
++++
+
+@snap[north-west]
+#### Задание №4.2
+@snapend
+
+@snap[west]
+Привязать бины хоббитов как атрибуты бина *shire*
+инъекцией через сеттер (*setter-based injection*)
+@snapend
 
 +++
 
@@ -595,6 +619,17 @@ public class Shire implements PersonGroup<Hobbit> {
 
 +++
 
+@snap[north-west]
+#### Задание №4.3
+@snapend
+
+@snap[west]
+Привязать бины хоббитов как атрибуты бина *shire*
+через конструктор (*constructor-based injection*)
+@snapend
+
++++
+
 @snap[north-east]
 #### Shire.java
 @snapend
@@ -631,6 +666,16 @@ public class Shire implements PersonGroup<Hobbit> {
 
 +++
 
+@snap[north-west]
+#### Задание №4.4
+@snapend
+
+@snap[west]
+Привязать список бинов хоббитов как атрибут бина *shire*
+@snapend
+
++++
+
 @snap[north-east]
 #### Shire.java
 @snapend
@@ -651,6 +696,16 @@ public class Shire implements PersonGroup<Hobbit> {
     }
 }
 ```
+
++++
+
+@snap[north-west]
+#### Задание №4.5
+@snapend
+
+@snap[west]
+Вывести имена всех жителей Шира(*Shire*) c помощью метода *persons* бина *shire*.
+@snapend
 
 +++
 
