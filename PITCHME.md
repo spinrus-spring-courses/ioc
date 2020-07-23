@@ -196,18 +196,18 @@ public class SpringTrainingApplication {
 ## Задание №1. Объявление бинов, XML.
 @snapend
 
-+++?color=linear-gradient(90deg, white 50%, gold 50%)
++++?color=linear-gradient(90deg, white 65%, gold 35%)
 
 @snap[north-west]
 ### Задание №1.1
 @snapend
 
-@snap[west span-45]
+@snap[west span-65]
 Объявить бины в 
 *spring-configuration.xml*
 @snapend
 
-@snap[east span-45]
+@snap[east span-35]
 @ul[list-spaced-bullets]
 - frodo
 - sam
@@ -224,10 +224,8 @@ public class SpringTrainingApplication {
 @snapend
 
 ```xml
-<bean>
-    <bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
-        <constructor-arg name="name" value="Aragorn"/>
-    </bean>
+<bean id="aragorn" class="io.itlabs.springtraining.domain.person.Human">
+    <constructor-arg name="name" value="Aragorn"/>
 </bean>
 ```
 
@@ -238,12 +236,10 @@ public class SpringTrainingApplication {
 @snapend
 
 ```xml
-<beans>
-    <bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" 
-          factory-method="withName">
-        <constructor-arg name="name" value="Legolas"/>
-    </bean>
-</beans>
+<bean id="legolas" class="io.itlabs.springtraining.domain.person.Elf" 
+      factory-method="withName">
+    <constructor-arg name="name" value="Legolas"/>
+</bean>
 ```
 
 +++
@@ -253,15 +249,13 @@ public class SpringTrainingApplication {
 @snapend
 
 ```xml
-<beans>
-    <bean id="mageFactory" 
-          class="io.itlabs.springtraining.domain.person.MageFactory"/>
-    
-    <bean id="gandalf" factory-method="withName" 
-          factory-bean="mageFactory">
-        <constructor-arg name="name" value="Gandalf"/>
-    </bean>
-</beans>
+<bean id="mageFactory" 
+      class="io.itlabs.springtraining.domain.person.MageFactory"/>
+
+<bean id="gandalf" factory-method="withName" 
+      factory-bean="mageFactory">
+    <constructor-arg name="name" value="Gandalf"/>
+</bean>
 ```
 
 +++
@@ -834,25 +828,23 @@ public class DomainBeanDefinitions {
 @snapend
 
 ```xml
-<beans>
-    <bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
-        <property name="name" value="Frodo"/>
-        <property name="weapons">
-            <list>
-                <ref bean="dagger"/>
-            </list>
-        </property>
-    </bean>
-    
-    <bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
-        <property name="name" value="Sam"/>
-        <property name="weapons">
-            <list>
-                <ref bean="dagger"/>
-            </list>
-        </property>
-    </bean>
-</beans>
+<bean id="frodo" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <property name="name" value="Frodo"/>
+    <property name="weapons">
+        <list>
+            <ref bean="dagger"/>
+        </list>
+    </property>
+</bean>
+
+<bean id="sam" class="io.itlabs.springtraining.domain.person.Hobbit">
+    <property name="name" value="Sam"/>
+    <property name="weapons">
+        <list>
+            <ref bean="dagger"/>
+        </list>
+    </property>
+</bean>
 ```
 @snap[south span-60]
 @[3-7б 12-16](Инъекция списка, ссылка на бин)
@@ -906,12 +898,16 @@ public class SpringTrainingApplication {
         final var greetingService = applicationContext
             .getBean("greetingService", GreetingService.class);
 
-        final var shire = applicationContext.getBean("shire", Shire.class);
+        final var shire = applicationContext
+            .getBean("shire", Shire.class);
+
         for (var person: shire.persons()) {
             greetingService.greet(person);
         }
 
-        final var dagger = applicationContext.getBean("dagger", Weapon.class);
+        final var dagger = applicationContext
+            .getBean("dagger", Weapon.class);
+        
         dagger.setBroken(true);
 
         for (var person: shire.persons()) {
@@ -920,7 +916,7 @@ public class SpringTrainingApplication {
     }
 }
 ```
-@[17-22]
+@[20-26]
 
 +++
 
