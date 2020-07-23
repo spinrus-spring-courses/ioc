@@ -1,9 +1,9 @@
 @snap[west]
-### Михаил Ильиных
-#### Команда Hybris
+## Михаил Ильиных
+### Команда Hybris
 
 Опыт Java и Spring разработки 4-5 лет, из них активной 1-2 года
-Oracle Certified Professional, Java SE 8 Programmer II 
+Oracle Certified Professional, Java SE 8 Programmer
 
 @snapend
 
