@@ -1383,7 +1383,7 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 ### Полезные материалы
 @ul
 - [Статья М.Фаулера по инъекции зависимости @fa[external-link]](https://martinfowler.com/articles/injection.html)
-- [Без википедии нельзя @fa[external-link]](https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8)
+- [Инъекция зависимости(Wiki) @fa[external-link]](https://ru.wikipedia.org/wiki/%D0%92%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8)
 - [Spring Framework Docs @fa[external-link]](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-introduction)
 - [Репозиторий проекта @fa[external-link]](https://github.com/spinrus-spring-courses/ioc)
 @ulend
