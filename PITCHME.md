@@ -549,7 +549,7 @@ public class SpringTrainingApplication {
 - Вооружить всех хоббитов кинжалами. Для этого нужно объявить бин *dagger* и модифицировать объявления хоббитов.
 - Добавить вывод информации об оружии в *LoggingGreetingService*.
 - В методе main изменить атрибут *broken* бина *dagger* на *true*. Повторить вывод в консоль.
-- Изменить *scope* бина *dagger*.
+- Изменить *scope* бина *dagger* на *prototype*.
 @ulend
 @snapend
 
