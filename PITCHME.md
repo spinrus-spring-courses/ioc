@@ -425,17 +425,17 @@ public class SpringTrainingApplication {
 ## Задание №3. Объявление бинов, Java.
 @snapend
 
-+++?color=linear-gradient(90deg, white 50%, gold 50%)
++++?color=linear-gradient(90deg, white 65%, gold 35%)
 
 @snap[north-west]
 ### Задание №3.1
 @snapend
 
-@snap[west span-45]
+@snap[west span-65]
 Объявить бины
 @snapend
 
-@snap[east span-45]
+@snap[east span-35]
 @ul[list-spaced-bullets]
 - boromir
 - gimli
@@ -948,3 +948,45 @@ public class DomainBeanDefinitions {
 @snap[south span-60]
 @[5](Теперь каждый получит свой экземпляр)
 @snapend
+
+---
+
+@snap[center]
+## Задание №6. Квалификаторы.
+@snapend
+
++++
+
+@snap[north-east]
+#### FellowshipOfTheRing.java
+@snapend
+
+```java
+public class FellowshipOfTheRing implements PersonGroup<Person> {
+
+    private final List<Person> persons;
+
+    public FellowshipOfTheRing(List<Person> persons) {
+        this.persons = persons;
+    }
+
+    @Override
+    public List<Person> persons() {
+        return persons;
+    }
+}
+```
+
++++
+
+@snap[north-west]
+### Задание №6.1
+Заполнить список участников братства кольца, *fellowshipOfTheRing*.
+@snapend
+
++++
+
+```java
+
+```
++++
