@@ -1081,3 +1081,17 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 @[2]
+
++++
+
+@snap[north-east]
+#### spring-configuration.xml
+@snapend
+
+```xml
+<bean id="gandalf" factory-method="withName" factory-bean="mageFactory">
+    <qualifier value="kind"/>
+    <constructor-arg name="name" value="Gandalf"/>
+</bean>
+```
+@[2]
