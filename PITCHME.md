@@ -22,6 +22,10 @@ Spring Framework: IoC, Dependency Injection
 ### А теперь практика
 @snapend
 
+Note:
+### Не тараторь!
+- Обзор проекта 
+
 ---
 
 @snap[north-east]
@@ -194,6 +198,7 @@ public class SpringTrainingApplication {
 
 @snap[center]
 ## Задание №1. Объявление бинов, XML.
+1-BeanDefinitionXml/Task
 @snapend
 
 +++?color=linear-gradient(90deg, white 65%, gold 35%)
@@ -1176,7 +1181,9 @@ public @interface Walker {
 
 }
 ```
+@snap[south span-60]
 @[5-8](Qualifier - аннотация на аннотации)
+@snapend
 
 +++
 
