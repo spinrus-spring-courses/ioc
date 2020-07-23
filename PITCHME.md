@@ -776,12 +776,6 @@ public abstract class Person implements Named {
 Вооружить всех хоббитов кинжалами. Для этого нужно объявить бин *dagger* и модифицировать объявления хоббитов.
 @snapend
 
-@ul[list-spaced-bullets]
-- Добавить вывод информации об оружии в *LoggingGreetingService*.
-- В методе main изменить атрибут *broken* бина *dagger* на *true*. Повторить вывод в консоль.
-- Изменить *scope* бина *dagger* на *prototype*.
-@ulend
-
 +++
 
 @snap[north-east]
@@ -919,3 +913,34 @@ public class SpringTrainingApplication {
 }
 ```
 @[17-22]
+
++++
+
+@snap[north-west]
+### Задание №5.3
+Изменить *scope* бина *dagger* на *prototype*.
+@snapend
+
++++
+
+@snap[north-east]
+#### DomainBeanDefinitions.java
+@snapend
+
+```java
+@Configuration
+public class DomainBeanDefinitions {
+
+    @Bean
+    @Scope("prototype")
+    public Weapon dagger() {
+        return new Weapon(DAGGER);
+    }
+    
+    // Other beans
+
+}
+```
+@snap[south span-60]
+@[5](Теперь каждый зависимы бин получит свой экземпляр)
+@snapend
