@@ -555,6 +555,44 @@ public class SpringTrainingApplication {
 
 ---
 
+@snap[north-east]
+#### Weapon.java
+@snapend
+
+```java
+public class Weapon {
+
+    public enum Type {
+        AXE,
+        BOW,
+        DAGGER,
+        SWORD,
+        STAFF
+    }
+
+    private final Type type;
+
+    public Weapon(Type type) {
+        this.type = type;
+    }
+
+    private boolean broken = false;
+
+    public Type getType() {
+        return type;
+    }
+
+    public boolean isBroken() {
+        return broken;
+    }
+
+    public void setBroken(boolean broken) {
+        this.broken = broken;
+    }
+}
+```
+---
+
 ### Add Some Slide Candy
 
 ![IMAGE](assets/img/presentation.png)
