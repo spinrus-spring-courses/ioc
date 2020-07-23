@@ -1049,10 +1049,10 @@ public class DomainBeanDefinitions {
 
 }
 ```
-@[11]
-@[17]
-@[26]
-@[39]
+@[10-14]
+@[16-23]
+@[25-36]
+@[38-41]
 
 +++
 
@@ -1066,7 +1066,6 @@ public class DomainBeanDefinitions {
     <constructor-arg name="name" value="Aragorn"/>
 </bean>
 ```
-@[2]
 
 +++
 
@@ -1080,7 +1079,6 @@ public class DomainBeanDefinitions {
     <constructor-arg name="name" value="Legolas"/>
 </bean>
 ```
-@[2]
 
 +++
 
@@ -1094,7 +1092,6 @@ public class DomainBeanDefinitions {
     <constructor-arg name="name" value="Gandalf"/>
 </bean>
 ```
-@[2]
 
 +++
 
@@ -1113,7 +1110,6 @@ public class DomainBeanDefinitions {
     </property>
 </bean>
 ```
-@[2]
 
 +++
 
@@ -1132,7 +1128,6 @@ public class DomainBeanDefinitions {
     </property>
 </bean>
 ```
-@[2]
 
 +++
 
