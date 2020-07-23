@@ -562,21 +562,15 @@ public class SpringTrainingApplication {
 ```java
 public class Weapon {
 
-    public enum Type {
-        AXE,
-        BOW,
-        DAGGER,
-        SWORD,
-        STAFF
-    }
+    public enum Type {AXE, BOW, DAGGER, SWORD, STAFF}
 
     private final Type type;
+
+    private boolean broken = false;
 
     public Weapon(Type type) {
         this.type = type;
     }
-
-    private boolean broken = false;
 
     public Type getType() {
         return type;
@@ -591,6 +585,23 @@ public class Weapon {
     }
 }
 ```
+
++++
+
+@snap[north-east]
+#### Person.java
+@snapend
+
+```java
+public abstract class Person implements Named {
+
+    protected String name;
+
+    protected List<Weapon> weapons;
+
+}
+```
+
 ---
 
 ### Add Some Slide Candy
