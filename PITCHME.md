@@ -511,7 +511,6 @@ public class Shire implements PersonGroup<Hobbit> {
 
 +++
 
-
 @snap[north-east]
 #### SpringTrainingApplication.java
 @snapend
@@ -537,6 +536,22 @@ public class SpringTrainingApplication {
 }
 ```
 @[13-16]
+
+---
+
+@snap[north-west]
+#### Задание №5. Scope.
+@snapend
+
+@snap[west]
+Привязать бины хоббитов как атрибуты бина *shire* разными способами:
+@ul[list-spaced-bullets]
+- Вооружить всех хоббитов кинжалами. Для этого нужно объявить бин *dagger* и модифицировать объявления хоббитов.
+- Добавить вывод информации об оружии в *LoggingGreetingService*.
+- В методе main изменить атрибут *broken* бина *dagger* на *true*. Повторить вывод в консоль.
+- Изменить *scope* бина *dagger*.
+@ulend
+@snapend
 
 ---
 
