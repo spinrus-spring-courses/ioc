@@ -142,7 +142,7 @@ Note:
 +++
 
 @snap[north-west]
-#### Spring Framework IoC Container
+#### Spring Framework
 @snapend
 
 @snap[west]
@@ -156,7 +156,7 @@ Note:
 +++
 
 @snap[north-west]
-#### Spring Framework
+#### Spring Framework Container
 @snapend
 
 @snap[center span-100 fragment]
@@ -171,7 +171,7 @@ Note:
 
 Note:
 ### Не тараторь!
-- Обзор проекта 
+Обзор проекта 
 
 ---
 
