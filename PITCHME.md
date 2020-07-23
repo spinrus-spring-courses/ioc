@@ -1391,8 +1391,11 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 
 ---
 
-@snap[north-west]
+@snap[center]
 ### Михаил Ильиных
+@spanend
+
+@span[south]
 #### milinyh@sdvor.com
 [Telegram @fa[external-link]](https://t.me/ilinykhma)
 @snapend
