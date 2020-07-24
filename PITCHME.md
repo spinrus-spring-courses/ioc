@@ -36,7 +36,7 @@ Spring Framework: IoC, Dependency Injection
 ---
 
 @snap[north-west]
-### Без внедрения зависимости
+#### Без внедрения зависимости
 @snapend
 
 ```java
@@ -58,7 +58,7 @@ Note:
 ---
 
 @snap[north-west]
-### Внедрение зависимости
+#### Внедрение зависимости
 @snapend
 
 ```java
@@ -80,7 +80,7 @@ Note:
 ---
 
 @snap[north-west]
-### Внедрение зависимости
+#### Внедрение зависимости
 @snapend
 
 ```java
@@ -99,11 +99,8 @@ Note:
 
 ---
 
-@snap[north-west]
-### Внедрение зависимости
-@snapend
-
 @snap[west]
+### Внедрение зависимости
 #### Плюсы:
 @ul
 - Снижает связность
@@ -113,11 +110,8 @@ Note:
 
 ---
 
-@snap[north-west]
-### Внедрение зависимости
-@snapend
-
 @snap[west]
+### Внедрение зависимости
 #### Минусы:
 @ul
 - Усложняет логику компонования объектов.
@@ -130,9 +124,9 @@ Note:
 
 ---
 
-@snap[center text-left]
-### Инверсия контроля (Inversion of Control)
-Внедрение зависимости (*DependencyInjection*) - это частный случай инверсии управления или контроля (*Inversion of Control*).
+@snap[west]
+### Инверсия контроля, *Inversion of Control*
+Внедрение зависимости - это частный случай инверсии управления или контроля.
 @snapend
 
 Note:
