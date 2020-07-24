@@ -19,14 +19,8 @@ Spring Framework: IoC, Dependency Injection
 
 ---
 
-@snap[center]
-## План действий
-@snapend
-
----
-
 @snap[west]
-### План действий
+## План действий
 @ul
 - Немного теории. Поговорим об инверсии контроля и внедрении зависимостей.
 - Много практики. Исследуем, как эти принципы использует Spring Framework.
@@ -42,7 +36,7 @@ Spring Framework: IoC, Dependency Injection
 ---
 
 @snap[north-west]
-#### Без внедрения зависимости
+### Без внедрения зависимости
 @snapend
 
 ```java
@@ -64,7 +58,7 @@ Note:
 ---
 
 @snap[north-west]
-#### Внедрение зависимости
+### Внедрение зависимости
 @snapend
 
 ```java
@@ -86,11 +80,7 @@ Note:
 ---
 
 @snap[north-west]
-#### Внедрение зависимости
-@snapend
-
-@snap[north-east]
-#### Example.java
+### Внедрение зависимости
 @snapend
 
 ```java
@@ -110,7 +100,7 @@ Note:
 ---
 
 @snap[north-west]
-#### Внедрение зависимости
+### Внедрение зависимости
 @snapend
 
 @snap[west]
@@ -124,7 +114,7 @@ Note:
 ---
 
 @snap[north-west]
-#### Внедрение зависимости
+### Внедрение зависимости
 @snapend
 
 @snap[west]
@@ -158,7 +148,7 @@ Note:
 ---
 
 @snap[north-west]
-#### Spring Framework
+### Spring Framework
 @snapend
 
 @snap[west]
@@ -172,7 +162,7 @@ Note:
 ---
 
 @snap[north-west]
-#### Spring Framework
+### Spring Framework
 @snapend
 
 @snap[center span-100 fragment]
@@ -370,11 +360,8 @@ public class SpringTrainingApplication {
 
 ---?color=linear-gradient(90deg, white 65%, gold 35%)
 
-@snap[north-west]
-### Задание №1.1
-@snapend
-
 @snap[west span-65]
+### Задание №1.1
 Объявить бины в 
 *spring-configuration.xml*
 @snapend
@@ -392,7 +379,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №1.1
+#### Задание №1.1
 @snapend
 
 @snap[north-east]
@@ -408,7 +395,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №1.1
+#### Задание №1.1
 @snapend
 
 @snap[north-east]
