@@ -412,7 +412,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №1.1
+#### Задание №1.1
 @snapend
 
 @snap[north-east]
@@ -432,7 +432,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №1.1
+#### Задание №1.1
 @snapend
 
 @snap[north-east]
@@ -452,7 +452,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №1.2
+#### Задание №1.2
 @snapend
 
 @snap[west]
@@ -462,7 +462,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №1.2
+#### Задание №1.2
 @snapend
 
 @snap[north-east]
@@ -505,11 +505,8 @@ public class SpringTrainingApplication {
 
 ---
 
-@snap[north-west]
-### Задание №2.1
-@snapend
-
 @snap[west]
+#### Задание №2.1
 @ul[list-spaced-bullets]
 - Объявить бин сервиса приветствия *greetingService*, типа *LoggingGreetingService*.
 - Задать значение для атрибута *greeting*.
@@ -519,7 +516,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №2.1
+#### Задание №2.1
 @snapend
 
 @snap[north-east]
@@ -547,7 +544,7 @@ public class LoggingGreetingService implements GreetingService {
 ---
 
 @snap[north-west]
-### Задание №2.1
+#### Задание №2.1
 @snapend
 
 @snap[north-east]
@@ -570,7 +567,7 @@ public class LoggingGreetingService implements GreetingService {
 ---
 
 @snap[west]
-### Задание №2.2
+#### Задание №2.2
 @ul[list-spaced-bullets]
 - Получить из контекста все бины типа *Person*. 
 - Вызвать метод *greet* бина *greetingService* для каждого из них.
@@ -580,7 +577,7 @@ public class LoggingGreetingService implements GreetingService {
 ---
 
 @snap[north-west]
-### Задание №2.2
+#### Задание №2.2
 @snapend
 
 @snap[north-east]
@@ -643,7 +640,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №3.1
+#### Задание №3.1
 @snapend
 
 @snap[north-east]
@@ -711,14 +708,14 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[west]
-### Задание №4.1
+#### Задание №4.1
 Привязать бины хоббитов как атрибуты бина *shire* внедрением атрибута (*field injection*)
 @snapend
 
 ---
 
 @snap[north-west]
-### Задание №4.1
+#### Задание №4.1
 @snapend
 
 @snap[north-east]
@@ -762,7 +759,7 @@ public class Shire implements PersonGroup<Hobbit> {
 ---
 
 @snap[north-west]
-### Задание №4.2
+#### Задание №4.2
 @snapend
 
 @snap[north-east]
@@ -813,14 +810,14 @@ public class Shire implements PersonGroup<Hobbit> {
 ---
 
 @snap[west]
-### Задание №4.3
+#### Задание №4.3
 Привязать бины хоббитов как атрибуты бина *shire* на базе конструктора (*constructor-based injection*)
 @snapend
 
 ---
 
 @snap[north-west]
-### Задание №4.3
+#### Задание №4.3
 @snapend
 
 @snap[north-east]
@@ -867,7 +864,7 @@ public class Shire implements PersonGroup<Hobbit> {
 ---
 
 @snap[north-west]
-### Задание №4.4
+#### Задание №4.4
 @snapend
 
 @snap[north-east]
@@ -894,14 +891,14 @@ public class Shire implements PersonGroup<Hobbit> {
 ---
 
 @snap[west]
-### Задание №4.5
+#### Задание №4.5
 Вывести имена всех жителей Шира(*Shire*) c помощью метода *persons* бина *shire*.
 @snapend
 
 ---
 
 @snap[north-west]
-### Задание №4.5
+#### Задание №4.5
 @snapend
 
 @snap[north-east]
@@ -991,7 +988,7 @@ public abstract class Person implements Named {
 ---
 
 @snap[north-west]
-### Задание №5.1
+#### Задание №5.1
 @snapend
 
 @snap[north-east]
@@ -1041,7 +1038,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №5.1
+#### Задание №5.1
 @snapend
 
 @snap[north-east]
@@ -1081,7 +1078,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №5.2
+#### Задание №5.2
 @snapend
 
 @snap[north-east]
@@ -1108,7 +1105,7 @@ public class LoggingGreetingService implements GreetingService {
 ---
 
 @snap[north-west]
-### Задание №5.2
+#### Задание №5.2
 @snapend
 
 @snap[north-east]
@@ -1157,7 +1154,7 @@ public class SpringTrainingApplication {
 ---
 
 @snap[north-west]
-### Задание №5.3
+#### Задание №5.3
 @snapend
 
 @snap[north-east]
@@ -1224,7 +1221,7 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 ---
 
 @snap[north-west]
-### Задание №6.1
+#### Задание №6.1
 @snapend
 
 @snap[north-east]
@@ -1314,7 +1311,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.1
+#### Задание №6.1
 @snapend
 
 @snap[north-east]
@@ -1331,7 +1328,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.1
+#### Задание №6.1
 @snapend
 
 @snap[north-east]
@@ -1348,7 +1345,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.1
+#### Задание №6.1
 @snapend
 
 @snap[north-east]
@@ -1370,7 +1367,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.1
+#### Задание №6.1
 @snapend
 
 @snap[north-east]
@@ -1392,7 +1389,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.1
+#### Задание №6.1
 @snapend
 
 @snap[north-east]
@@ -1427,7 +1424,7 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 ---
 
 @snap[north-west]
-### Задание №6.2
+#### Задание №6.2
 @snapend
 
 @snap[north-east]
@@ -1451,7 +1448,7 @@ public @interface Walker {
 ---
 
 @snap[north-west]
-### Задание №6.2
+#### Задание №6.2
 @snapend
 
 @snap[north-east]
@@ -1524,7 +1521,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.2
+#### Задание №6.2
 @snapend
 
 @snap[north-east]
@@ -1541,7 +1538,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.2
+#### Задание №6.2
 @snapend
 
 @snap[north-east]
@@ -1558,7 +1555,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.2
+#### Задание №6.2
 @snapend
 
 @snap[north-east]
@@ -1575,7 +1572,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.2
+#### Задание №6.2
 @snapend
 
 @snap[north-east]
@@ -1597,7 +1594,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.2
+#### Задание №6.2
 @snapend
 
 @snap[north-east]
@@ -1619,7 +1616,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.2
+#### Задание №6.2
 @snapend
 
 @snap[north-east]
@@ -1643,12 +1640,6 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 }
 ```
 @[6-8]
-
----
-
-@snap[center]
-## Выводы
-@snapend
 
 ---
 
