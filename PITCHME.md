@@ -21,6 +21,12 @@ Spring Framework: IoC, Dependency Injection
 
 @snap[center]
 ## План действий
+@snapend
+
+---
+
+@snap[west]
+### План действий
 @ul
 - Немного теории. Поговорим об инверсии контроля и внедрении зависимостей.
 - Много практики. Исследуем, как эти принципы использует Spring Framework.
