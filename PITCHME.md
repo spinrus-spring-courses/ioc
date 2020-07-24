@@ -1,3 +1,10 @@
+@snap[center]
+# Lord of The Spring
+Spring Framework: IoC, Dependency Injection
+@snapend
+
+---
+
 @snap[west]
 ## Михаил Ильиных
 ### Команда Hybris
@@ -13,19 +20,10 @@
 ---
 
 @snap[center]
-# Lord of The Spring
-
-Spring Framework: IoC, Dependency Injection
-@snapend
-
----
-
-@snap[center]
 ## План действий
 @ul
-- Немного поговорим об инверсии контроля и внедрении зависимостей.
-- Практическая часть. Поcмотрим, как эти принципы используется в Spring Framework.
-- P.S. Тренироваться будем на хоббитах.
+- Немного теории. Поговорим об инверсии контроля и внедрении зависимостей.
+- Много практики. Исследуем, как эти принципы использует Spring Framework.
 @ulend
 @snapend
 
@@ -35,7 +33,7 @@ Spring Framework: IoC, Dependency Injection
 ## Что такое внедрение зависимости?
 @snapend
 
-+++
+---
 
 @snap[north-west]
 #### Без внедрения зависимости
@@ -50,13 +48,14 @@ class Aragorn {
 ```
 
 Note:
-Представим класс Aragorn. Бедняге, чтобы выполнить свои задачи, нужен меч. 
+### Не тараторь!
+Представим класс Aragorn. Ему, бедняге, чтобы выполнить свои задачи, нужен меч. 
 И этот класс берет ответственность за создание своих зависимостей (т.е. меча) на себя.
 
 Недостатки очевидны: очень тесная связность, подобный код сложно тестировать.
 Плюсы тоже есть - быстро и все в одном месте :)
 
-+++
+---
 
 @snap[north-west]
 #### Внедрение зависимости
@@ -74,13 +73,14 @@ class Aragorn {
 ```
 
 Note:
+### Не тараторь!
 Теперь представим, что Арагорн принимает оружие, которое ему передаст кто-то другой. Владыка Элронд, например.
 Обратите внимание, что Weapon в данном случае имеет смысл сделать интерфейсом (или абстрактным классом).
 
-+++
+---
 
 @snap[north-west]
-#### А теперь с внедрением
+#### Внедрение зависимости
 @snapend
 
 @snap[north-east]
@@ -98,24 +98,33 @@ public class Example {
 }
 ```
 Note:
+### Не тараторь!
 Это пример внедрения на базе конструктора. Здесь мы выполнили внедрение вручную, но с этим нам может помочь фреймворк. 
 
-+++
+---
+
+@snap[north-west]
+#### Внедрение зависимости
+@snapend
 
 @snap[west]
-#### Плюсы применения внедрения зависимости
+#### Плюсы:
 @ul
-- Снижает связность кода
+- Снижает связность
 - Повышает тестируемость
 @ulend
 @snapend
 
-+++
+---
+
+@snap[north-west]
+#### Внедрение зависимости
+@snapend
 
 @snap[west]
-#### Минусы применения внедрения зависимости
+#### Минусы:
 @ul
-- Усложняет логику компонования агрегатов
+- Усложняет логику компонования объектов.
 - Усложняет управление жизненным циклом объектов, т.к. за их создание отвечает класс-посредник.
 @ulend
 @snapend
@@ -123,7 +132,7 @@ Note:
 Note:
 Это все про использование принципа вручную. А что если управление зависимостями на себя возьмет фреймворк?
 
-+++
+---
 
 @snap[center text-left]
 ### Инверсия контроля (Inversion of Control)
@@ -131,6 +140,7 @@ Note:
 @snapend
 
 Note:
+### Не тараторь!
 Это ситуация, когда потоком управления программы управляет фреймворк, а программист встраивает свою логику с помощью предусмотренных точек расширения, то программист перестает контролировать ход выполнения программы.
 
 ---
@@ -139,7 +149,7 @@ Note:
 ## Spring Framework
 @snapend
 
-+++
+---
 
 @snap[north-west]
 #### Spring Framework
@@ -153,10 +163,10 @@ Note:
 @ulend
 @snapend
 
-+++
+---
 
 @snap[north-west]
-#### Spring Framework Container
+#### Spring Framework
 @snapend
 
 @snap[center span-100 fragment]
@@ -196,7 +206,7 @@ public abstract class Person implements Named {
 }
 ```
 
-+++
+---
 
 @snap[north-east]
 #### Hobbit.java
@@ -208,7 +218,7 @@ public class Hobbit extends Person {
 }
 ```
 
-+++
+---
 
 @snap[north-east]
 #### Human.java
@@ -223,7 +233,7 @@ public class Human extends Person {
 }
 ```
 
-+++
+---
 
 @snap[north-east]
 #### Elf.java
@@ -246,7 +256,7 @@ public class Elf extends Person {
 @[7-9](Фабричный метод)
 @snapend
 
-+++
+---
 
 @snap[north-east]
 #### Dwarf.java
@@ -277,7 +287,7 @@ public class Dwarf extends Person {
 @[3-18](Строитель, он же Builder)
 @snapend
 
-+++
+---
 
 @snap[north-east]
 #### Mage.java
@@ -295,7 +305,7 @@ public class Mage extends Person {
 @[3-5](Конструктор c видимостью по-умолчанию)
 @snapend
 
-+++
+---
 
 @snap[north-east]
 #### MageFactory.java
@@ -352,7 +362,7 @@ public class SpringTrainingApplication {
 1-BeanDefinitionXml/Task
 @snapend
 
-+++?color=linear-gradient(90deg, white 65%, gold 35%)
+---?color=linear-gradient(90deg, white 65%, gold 35%)
 
 @snap[north-west]
 ### Задание №1.1
@@ -373,7 +383,11 @@ public class SpringTrainingApplication {
 @ulend
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №1.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -385,7 +399,11 @@ public class SpringTrainingApplication {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №1.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -398,7 +416,11 @@ public class SpringTrainingApplication {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №1.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -414,7 +436,11 @@ public class SpringTrainingApplication {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №1.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -430,7 +456,7 @@ public class SpringTrainingApplication {
 </bean>
 ```
 
-+++
+---
 
 @snap[north-west]
 ### Задание №1.2
@@ -440,7 +466,11 @@ public class SpringTrainingApplication {
 Вывести в консоль атрубут *name* всех объявленных бинов
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №1.2
+@snapend
 
 @snap[north-east]
 #### SpringTrainingApplication.java
@@ -469,6 +499,7 @@ public class SpringTrainingApplication {
 @[9-10](Получим контекст)
 @[12-14](Получим бины типа *Person* из контекста и выведем атрибут в консоль)
 @snapend
+
 ---
 
 @snap[center]
@@ -479,7 +510,7 @@ public class SpringTrainingApplication {
 2-BeanDefinitionAnnotation/Task
 @snapend
 
-+++
+---
 
 @snap[north-west]
 ### Задание №2.1
@@ -492,7 +523,11 @@ public class SpringTrainingApplication {
 @ulend
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №2.1
+@snapend
 
 @snap[north-east]
 #### LoggingGreetingService.java
@@ -516,7 +551,11 @@ public class LoggingGreetingService implements GreetingService {
 }
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №2.1
+@snapend
 
 @snap[north-east]
 #### LoggingGreetingService.java
@@ -534,20 +573,22 @@ public class LoggingGreetingService implements GreetingService {
 @[1](Объявление бина)
 @[4](Внедрение зависимости, значение)
 @snapend
-+++
 
-@snap[north-west]
-### Задание №2.2
-@snapend
+---
 
 @snap[west]
+### Задание №2.2
 @ul[list-spaced-bullets]
 - Получить из контекста все бины типа *Person*. 
 - Вызвать метод *greet* бина *greetingService* для каждого из них.
 @ulends
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №2.2
+@snapend
 
 @snap[north-east]
 #### SpringTrainingApplication.java
@@ -589,13 +630,10 @@ public class SpringTrainingApplication {
 3-BeanDefinitionJava/Task
 @snapend
 
-+++?color=linear-gradient(90deg, white 65%, gold 35%)
-
-@snap[north-west]
-### Задание №3.1
-@snapend
+---?color=linear-gradient(90deg, white 65%, gold 35%)
 
 @snap[west span-65]
+### Задание №3.1
 Объявить бины
 @snapend
 
@@ -609,7 +647,11 @@ public class SpringTrainingApplication {
 @ulend
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №3.1
+@snapend
 
 @snap[north-east]
 #### DomainBeanDefinitions.java
@@ -673,17 +715,18 @@ public class DomainBeanDefinitions {
 4-DependencyInjection/Task
 @snapend
 
-+++
+---
+
+@snap[west]
+### Задание №4.1
+Привязать бины хоббитов как атрибуты бина *shire* внедрением атрибута (*field injection*)
+@snapend
+
+---
 
 @snap[north-west]
 ### Задание №4.1
 @snapend
-
-@snap[west]
-Привязать бины хоббитов как атрибуты бина *shire* внедрением атрибута (*field injection*)
-@snapend
-
-+++
 
 @snap[north-east]
 #### Shire.java
@@ -716,17 +759,18 @@ public class Shire implements PersonGroup<Hobbit> {
 @[4-14](Никогда так не делайте)
 @snapend
 
-+++
+---
+
+@snap[west]
+### Задание №4.2
+Привязать бины хоббитов как атрибуты бина *shire* внедрением на базе сеттер (*setter-based injection*)
+@snapend
+
+---
 
 @snap[north-west]
 ### Задание №4.2
 @snapend
-
-@snap[west]
-Привязать бины хоббитов как атрибуты бина *shire* внедрением на базе сеттер (*setter-based injection*)
-@snapend
-
-+++
 
 @snap[north-east]
 #### Shire.java
@@ -773,17 +817,18 @@ public class Shire implements PersonGroup<Hobbit> {
 @[1]
 @[17-35]
 
-+++
+---
+
+@snap[west]
+### Задание №4.3
+Привязать бины хоббитов как атрибуты бина *shire* на базе конструктора (*constructor-based injection*)
+@snapend
+
+---
 
 @snap[north-west]
 ### Задание №4.3
 @snapend
-
-@snap[west]
-Привязать бины хоббитов как атрибуты бина *shire* на базе конструктора (*constructor-based injection*)
-@snapend
-
-+++
 
 @snap[north-east]
 #### Shire.java
@@ -819,17 +864,18 @@ public class Shire implements PersonGroup<Hobbit> {
 @[1]
 @[4-19]
 
-+++
+---
+
+@snap[west]
+### Задание №4.4
+Привязать список бинов хоббитов как атрибут бина *shire*
+@snapend
+
+---
 
 @snap[north-west]
 ### Задание №4.4
 @snapend
-
-@snap[west]
-Привязать список бинов хоббитов как атрибут бина *shire*
-@snapend
-
-+++
 
 @snap[north-east]
 #### Shire.java
@@ -852,17 +898,18 @@ public class Shire implements PersonGroup<Hobbit> {
 }
 ```
 
-+++
+---
+
+@snap[west]
+### Задание №4.5
+Вывести имена всех жителей Шира(*Shire*) c помощью метода *persons* бина *shire*.
+@snapend
+
+---
 
 @snap[north-west]
 ### Задание №4.5
 @snapend
-
-@snap[west]
-Вывести имена всех жителей Шира(*Shire*) c помощью метода *persons* бина *shire*.
-@snapend
-
-+++
 
 @snap[north-east]
 #### SpringTrainingApplication.java
@@ -900,7 +947,7 @@ public class SpringTrainingApplication {
 5-BeanScope/Task
 @snapend
 
-+++
+---
 
 @snap[north-east]
 #### Weapon.java
@@ -923,7 +970,7 @@ public class Weapon {
 }
 ```
 
-+++
+---
 
 @snap[north-east]
 #### Person.java
@@ -941,14 +988,18 @@ public abstract class Person implements Named {
 }
 ```
 
-+++
+---
 
-@snap[north-west]
+@snap[west]
 ### Задание №5.1
 Вооружить всех хоббитов кинжалами. Для этого нужно объявить бин *dagger* и модифицировать объявления хоббитов.
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №5.1
+@snapend
 
 @snap[north-east]
 #### DomainBeanDefinitions.java
@@ -994,7 +1045,11 @@ public class DomainBeanDefinitions {
 @[11-12, 23-24] (Внедрение через вызов функции)
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №5.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1023,14 +1078,18 @@ public class DomainBeanDefinitions {
 @[3-7б 12-16](Внедрение списка, ссылка на бин)
 @snapend
 
-+++
+---
 
-@snap[north-west]
+@snap[west]
 ### Задание №5.2
 В методе main изменить атрибут *broken* бина *dagger* на *true*. Повторить вывод в консоль.
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №5.2
+@snapend
 
 @snap[north-east]
 #### LoggingGreetingService.java
@@ -1053,7 +1112,11 @@ public class LoggingGreetingService implements GreetingService {
 }
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №5.2
+@snapend
 
 @snap[north-east]
 #### SpringTrainingApplication.java
@@ -1091,14 +1154,18 @@ public class SpringTrainingApplication {
 ```
 @[20-26]
 
-+++
+---
 
-@snap[north-west]
+@snap[west]
 ### Задание №5.3
 Изменить *scope* бина *dagger* на *prototype*.
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №5.3
+@snapend
 
 @snap[north-east]
 #### DomainBeanDefinitions.java
@@ -1132,7 +1199,7 @@ public class DomainBeanDefinitions {
 6-Qualifiers/Task
 @snapend
 
-+++
+---
 
 @snap[north-east]
 #### FellowshipOfTheRing.java
@@ -1154,14 +1221,18 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 }
 ```
 
-+++
+---
 
-@snap[north-west]
+@snap[west]
 ### Задание №6.1
 Заполнить список участников братства кольца, *fellowshipOfTheRing*.
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.1
+@snapend
 
 @snap[north-east]
 #### DomainBeanDefinitions.java
@@ -1230,7 +1301,11 @@ public class DomainBeanDefinitions {
 @[25-36]
 @[38-49]
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1243,7 +1318,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1256,7 +1335,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1269,7 +1352,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1287,7 +1374,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.1
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1305,7 +1396,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.1
+@snapend
 
 @snap[north-east]
 #### FellowshipOfTheRing.java
@@ -1329,14 +1424,18 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 ```
 @[6-8]
 
-+++
+---
 
-@snap[north-west]
+@snap[west]
 ### Задание №6.2
 Заполнить список участников братства кольца, *fellowshipOfTheRing*. Использовать свою аннотацию.
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.2
+@snapend
 
 @snap[north-east]
 #### Walker.java
@@ -1356,7 +1455,11 @@ public @interface Walker {
 @[5-8](Qualifier - аннотация на аннотации)
 @snapend
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.2
+@snapend
 
 @snap[north-east]
 #### DomainBeanDefinitions.java
@@ -1425,7 +1528,11 @@ public class DomainBeanDefinitions {
 @[25-36]
 @[38-49]
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.2
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1438,7 +1545,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.2
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1451,7 +1562,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.2
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1464,7 +1579,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.2
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1482,7 +1601,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.2
+@snapend
 
 @snap[north-east]
 #### spring-configuration.xml
@@ -1500,7 +1623,11 @@ public class DomainBeanDefinitions {
 </bean>
 ```
 
-+++
+---
+
+@snap[north-west]
+### Задание №6.2
+@snapend
 
 @snap[north-east]
 #### FellowshipOfTheRing.java
@@ -1523,6 +1650,23 @@ public class FellowshipOfTheRing implements PersonGroup<Person> {
 }
 ```
 @[6-8]
+
+---
+
+@snap[center]
+## Выводы
+@snapend
+
+---
+
+@snap[west]
+### Выводы
+@ul
+- Приложение стоится из управляемых фрейворком объектов - бинов, *bean*.
+- Spring Framework позволяет практически из любого POJO создать управляемый объект.
+- Для этого нужен сам POJO и конфигурация (XML, Java, Groovy или аннотации).
+@ulend
+@snapend
 
 ---
 
