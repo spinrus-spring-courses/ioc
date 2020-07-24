@@ -125,7 +125,8 @@ Note:
 ---
 
 @snap[west]
-### Инверсия контроля, *Inversion of Control*
+### Инверсия контроля
+#### *Inversion of Control*
 Внедрение зависимости - это частный случай инверсии управления или контроля.
 @snapend
 
@@ -703,7 +704,7 @@ public class DomainBeanDefinitions {
 
 @snap[west]
 #### Задание №4.1
-Привязать бины хоббитов как атрибуты бина *shire* внедрением атрибута (*field injection*)
+Привязать бины хоббитов как атрибуты бина *shire* внедрением атрибута, *field injection*
 @snapend
 
 ---
@@ -747,7 +748,7 @@ public class Shire implements PersonGroup<Hobbit> {
 
 @snap[west]
 ### Задание №4.2
-Привязать бины хоббитов как атрибуты бина *shire* внедрением на базе сеттер (*setter-based injection*)
+Привязать бины хоббитов как атрибуты бина *shire* внедрением на базе сеттер, *setter-based injection*
 @snapend
 
 ---
@@ -805,7 +806,7 @@ public class Shire implements PersonGroup<Hobbit> {
 
 @snap[west]
 #### Задание №4.3
-Привязать бины хоббитов как атрибуты бина *shire* на базе конструктора (*constructor-based injection*)
+Привязать бины хоббитов как атрибуты бина *shire* на базе конструктора, *constructor-based injection*
 @snapend
 
 ---
@@ -886,7 +887,7 @@ public class Shire implements PersonGroup<Hobbit> {
 
 @snap[west]
 #### Задание №4.5
-Вывести имена всех жителей Шира(*Shire*) c помощью метода *persons* бина *shire*.
+Вывести имена всех жителей Шира c помощью метода *persons* бина *shire*.
 @snapend
 
 ---
@@ -1288,7 +1289,7 @@ public class DomainBeanDefinitions {
 ---
 
 @snap[north-west]
-### Задание №6.1
+#### Задание №6.1
 @snapend
 
 @snap[north-east]
